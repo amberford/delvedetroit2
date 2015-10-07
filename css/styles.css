@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Dosis:400,600);
-@import url(https://fonts.googleapis.com/css?family=Lato);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
 *,
 *:after,
 *:before {
@@ -34,6 +34,9 @@ nav li {
 	display: inline-block;
 	background: #eee;
 	padding: 5px 35px;
+	font-weight: 700;
+	font-size: 0.8em;
+	text-transform: uppercase;
 }
 nav li a {
 	color: black;
@@ -72,7 +75,12 @@ nav li a {
 	margin-bottom: 10px;
 }
 #timeline {
-	margin: 25px 0 40px 0;
+	margin: 40px 0 60px 0;
+	margin-left: auto;
+	margin-right: auto;
+	height: 4px;
+	width: 50%;
+	background-color: #ccc;
 	text-align: center;
 }
 section, main {
