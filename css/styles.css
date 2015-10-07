@@ -16,13 +16,13 @@ nav {
 nav h1 {
 	text-align: center;
 }
-.wrapper {
+.wrapper, section {
 	margin: auto;
-	width: 70%;
+	width: 60%;
 }
-#timeline1 {
+#timelineNonDate {
 	margin: 0 auto;
-	width: 600px;
+	width: 500px;
 }
 footer {
 	width: 100%;
