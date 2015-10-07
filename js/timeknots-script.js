@@ -5,8 +5,9 @@ var delveTimeline =[
 ];
 
 var nonDatedata = [
- {"value": 1920, "name": "Roaring Twenties" },
- {"value": 1960, "name": "Motown" },
- {"value": 2015, "name": "Present" }
+	{"value": 1801, "name": "Beginnings" },
+	{"value": 1920, "name": "Roaring Twenties" },
+	{"value": 1960, "name": "Motown" },
+	{"value": 2015, "name": "Present" }
 ];
 TimeKnots.draw("#timelineNonDate", nonDatedata, {dateDimension:false, color: "#ccc", width:700, showLabels: true, labelFormat: "%Y"});

@@ -1,34 +1,95 @@
-@import url(https://fonts.googleapis.com/css?family=Lora:400,700);
+@import url(https://fonts.googleapis.com/css?family=Dosis:400,600);
+@font-face {
+    font-family: "Helvetica Neue";
+    src: url('fonts/HelveticaNeue-Medium.otf');
+}
 
-* {
-	margin: 0;
+*,
+*:after,
+*:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 	padding: 0;
+	margin: 0;
 }
 body {
-	font-family: "Lora", serif;
+	font-family: "Helvetica Neue", serif;
 }
 nav {
 	width: 100%;
-	height: 100px;
-	line-height: 100px;
-	background: #eee;
+	border-bottom: 2px solid #eee;
+}
+header {
+	margin-top: 30px;
+	margin-bottom: 20px;
 }
 nav h1 {
+	font-family: "Dosis", sans-serif;
+	font-size: 2.5em;
 	text-align: center;
 }
-.wrapper, section {
-	margin: auto;
-	width: 60%;
-}
-#timelineNonDate {
+nav ul {
 	margin: 0 auto;
-	width: 700px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+nav li {
+	display: inline-block;
+	background: #eee;
+	padding: 5px 35px;
+}
+nav li a {
+	color: black;
+	text-decoration: none;
+}
+.wrapper {
+	margin: auto;
+	width: 65%;
+}
+.timeline-data {
+	width: 30%;;
+	display: inline-block;
+}
+.timeline-data h1 {
+	font-family: "Dosis", sans-serif;
+	font-size: 2em;
+	text-transform: uppercase;
+}
+.timeline-data h4 {
+	margin-top: 5px;
+	text-transform: uppercase;
+	font-size: 0.85em;
+	color: #666;
+}
+.timeline-data p {
+	margin-top: 15px;
+	color: #666;
+	font-size: 0.85em;
+	line-height: 1.2em;
+}
+section, main {
+	padding: 0;
+	margin: 0;
+}
+main {
+	padding-left: 4%;
+	display: inline-block;
+	vertical-align: top;
+	width: 69%;
 }
 #map {
 	width: 100%;
 	height: 300px;
-	background: #ccc;
-	margin-bottom: 20px;
+	background-color: #4b8a79;
+	line-height: 300px;
+	text-align: center;
+	font-family: "Dosis";
+	font-size: 2em;
+}
+#timelineNonDate {
+	margin: 0 auto;
+	width: 700px;
 }
 footer {
 	width: 100%;
