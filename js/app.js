@@ -16,6 +16,11 @@ app.config(function($routeProvider) {
 		controller: '1920Ctrl',
 		templateUrl: 'partials/1920-view.html'
 	});
+	$routeProvider.when('/present',
+	{
+		controller: '2015Ctrl',
+		templateUrl: 'partials/present-view.html'
+	});
 	$routeProvider.otherwise(
 	{ 
 		redirectTo: '/', 
