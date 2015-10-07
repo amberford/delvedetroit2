@@ -82,6 +82,35 @@ nav li a {
 	width: 50%;
 	background-color: #ccc;
 	text-align: center;
+	position: relative;
+}
+#date-1801 {
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	background-color: #fff;
+	border: 4px solid #d5401d;
+	display: inline-block;
+	left: 0;
+	top: -10px;
+	position: absolute;
+}
+#date-1801:hover {
+	background-color: #d5401d;
+}
+#date-2015 {
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	background-color: #fff;
+	border: 4px solid #d1d96a;
+	display: inline-block;
+	right: 0;
+	top: -10px;
+	position: absolute;
+}
+#date-2015:hover {
+	background-color: #d1d96a;
 }
 section, main {
 	padding: 0;
