@@ -45,7 +45,7 @@ nav li a {
 }
 .wrapper {
 	margin: auto;
-	width: 65%;
+	width: 75%;
 }
 .timeline-data {
 	width: 30%;;
@@ -68,6 +68,13 @@ nav li a {
 	font-size: 0.85em;
 	line-height: 1.2em;
 }
+.timeline-data ul {
+	margin-top: 20px;
+	font-size: 0.8em;
+}
+.timeline-data li {
+	margin-bottom: 10px;
+}
 section, main {
 	padding: 0;
 	margin: 0;
@@ -76,7 +83,7 @@ main {
 	padding-left: 4%;
 	display: inline-block;
 	vertical-align: top;
-	width: 69%;
+	width: 69.5%;
 }
 #map {
 	width: 100%;
@@ -86,6 +93,30 @@ main {
 	text-align: center;
 	font-family: "Dosis";
 	font-size: 2em;
+	padding-bottom: 10px;
+	border-bottom: 2px solid #4b8a79;
+	margin-bottom: 20px;
+}
+article {
+	width: 100%;
+	padding: 20px 0;
+	border-top: 2px solid #4b8a79;
+	margin-top: 20px;
+	float: left;
+}
+article p {
+	margin-bottom: 5px;
+}
+aside {
+	width: 50%;
+	float: left;
+}
+.left {
+	padding-right: 18px;
+	border-right: 2px solid #4b8a79;
+}
+.right {
+	padding-left: 20px;
 }
 #timelineNonDate {
 	margin: 0 auto;
