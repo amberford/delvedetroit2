@@ -116,7 +116,7 @@ main {
 /* TIMELINE CONTENT
 ================================================*/
 .timeline-data {
-	width: 30%;;
+	width: 30%;
 	padding-right: 4%;
 	display: inline-block;
 	vertical-align: top;
@@ -158,6 +158,11 @@ main {
 
 /* CONTENT STYLES
 ================================================*/
+#article-wrapper {
+	width: 69.5%;
+	display: inline-block;
+	vertical-align: top;
+}
 article {
 	width: 100%;
 	padding: 0 0 20px 0;
