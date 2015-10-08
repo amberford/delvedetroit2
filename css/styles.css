@@ -143,17 +143,8 @@ main {
 	margin-bottom: 10px;
 }
 
-
-section, main {
-	padding: 0;
-	margin: 0;
-}
-/*main {
-	padding-left: 4%;
-	display: inline-block;
-	vertical-align: top;
-	width: 69.5%;
-}*/
+/* MAP
+================================================*/
 #map {
 	width: 69.5%;
 	padding-left: 4%;
@@ -215,4 +206,5 @@ footer {
 	text-align: center;
 	margin-top: 60px;
 	background: #eee;
+	clear: both;
 }
