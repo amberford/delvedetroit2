@@ -1,6 +1,6 @@
 var app = angular.module('delveApp');
 
-app.controller('mapCtrl', function() { 
+app.controller('mapCtrl', function($scope) { 
   // [START region_initialization]
   // This example creates a custom overlay called USGSOverlay, containing
   // a U.S. Geological Survey (USGS) image of the relevant area on the map.
@@ -11,6 +11,15 @@ app.controller('mapCtrl', function() {
   // google.maps.event.addDomListener().
   // Note that we set the prototype to an instance, rather than the
   // parent class itself, because we do not wish to modify the parent class.
+
+  $scope.oldMap = function() {
+    overlay.show();
+  };
+
+  $scope.newMap = function() {
+    overlay.hide();
+  };
+
 
   var overlay;
   USGSOverlay.prototype = new google.maps.OverlayView();
