@@ -4,7 +4,7 @@ app.config(function($routeProvider) {
 	$routeProvider.when('/',
 	{
 		controller: 'mainCtrl',
-		templateUrl: 'partials/main-view.html'
+		templateUrl: 'partials/present-view.html'
 	});
 	$routeProvider.when('/1960',
 	{
@@ -16,10 +16,10 @@ app.config(function($routeProvider) {
 		controller: '1920Ctrl',
 		templateUrl: 'partials/1920-view.html'
 	});
-	$routeProvider.when('/present',
+	$routeProvider.when('/1890',
 	{
-		controller: '2015Ctrl',
-		templateUrl: 'partials/present-view.html'
+		controller: '1890Ctrl',
+		templateUrl: 'partials/main-view.html'
 	});
 	$routeProvider.when('/museum',
 	{
@@ -31,4 +31,3 @@ app.config(function($routeProvider) {
 		redirectTo: '/', 
 	});
 });
-
