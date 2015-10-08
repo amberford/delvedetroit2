@@ -29,7 +29,7 @@ app.controller('mapCtrl', function($scope) {
   // Initialize the map and the custom overlay.
     function initMap() {
       var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 9,
+        zoom: 15,
         center: detroit,
         mapTypeId: google.maps.MapTypeId.SATELLITE
       });
