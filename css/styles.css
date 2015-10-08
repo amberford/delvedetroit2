@@ -151,7 +151,7 @@ main {
 ================================================*/
 #map {
 	width: 69.5%;
-	height: 450px;
+	height: 300px;
 	background-color: #4b8a79;
 	text-align: center;
 	font-family: "Dosis";
@@ -207,4 +207,13 @@ footer {
 	margin-top: 60px;
 	background: #eee;
 	clear: both;
+}
+
+
+/* BEGIN MEDIA QUERIES
+================================================*/
+@media only screen and (-webkit-min-device-pixel-ratio: 2),(min-resolution: 192dpi) {
+  #map {
+  	height: 450px;
+  }
 }
