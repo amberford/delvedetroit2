@@ -84,7 +84,7 @@ main {
 	position: absolute;
 	top: -10px;
 }
-.year1890 {
+#year1890 {
 	border: 4px solid #d5401d;
 	left: 0;
 }

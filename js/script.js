@@ -1,6 +1,6 @@
 jQuery(document).ready(function(){
 	var $ = jQuery;
-	$('.year1890').click(function(){
+	$('#year1890').click(function(){
 		$('#summary-2015').css('display', 'none');
 		$('#summary-1920').css('display', 'none');
 		$('#summary-1960').css('display', 'none');
