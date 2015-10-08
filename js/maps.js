@@ -75,4 +75,3 @@ for (i = 0; i < locations.length; i++) {
     })(marker, i));
 }
 
-google.maps.event.addDomListener(window, 'load', initialize);
