@@ -39,12 +39,12 @@ app.controller('mapCtrl', function() {
 
       // Create the DIV to hold the control and call the CenterControl() constructor
       // passing in this DIV.
-      var centerControlDiv = document.createElement('div');
-      var centerControl = new CenterControl(centerControlDiv, map, detroit);
+      // var centerControlDiv = document.createElement('div');
+      // var centerControl = new CenterControl(centerControlDiv, map, detroit);
 
-      centerControlDiv.index = 1;
-      centerControlDiv.style['padding-top'] = '10px';
-      map.controls[google.maps.ControlPosition.TOP_CENTER].push(centerControlDiv);
+      // centerControlDiv.index = 1;
+      // centerControlDiv.style['padding-top'] = '10px';
+      // map.controls[google.maps.ControlPosition.TOP_CENTER].push(centerControlDiv);
     }
     // [END region_initialization]
 

@@ -146,6 +146,7 @@ main {
 	padding-bottom: 10px;
 	border-bottom: 2px solid #4b8a79;
 	margin-bottom: 20px;
+	overflow: none;
 }
 article {
 	width: 100%;
