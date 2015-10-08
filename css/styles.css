@@ -151,6 +151,7 @@ main {
 ================================================*/
 #map {
 	width: 69.5%;
+	height: 400px;
 	background-color: #4b8a79;
 	text-align: center;
 	font-family: "Dosis";
@@ -217,7 +218,7 @@ footer {
        only screen and (-webkit-min-device-pixel-ratio: 2), 
        only screen and (min-device-pixel-ratio: 2) {
  	#map {
-		height: 450px;
+		height: 700px;
 	}
 }
 
@@ -226,6 +227,15 @@ footer {
 only screen and (-o-min-device-pixel-ratio: 13/10),
 only screen and (min-resolution: 120dpi) {
 	#map {
-		height: 450px;
+		height: 700px;
+	}
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and ( min-resolution: 192dpi),
+only screen and ( min-resolution: 2dppx) {
+    #map {
+		height: 700px;
 	}
 }
