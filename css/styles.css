@@ -115,6 +115,7 @@ main {
 ================================================*/
 .timeline-data {
 	width: 30%;;
+	padding-right: 4%;
 	display: inline-block;
 	vertical-align: top;
 }
@@ -147,7 +148,6 @@ main {
 ================================================*/
 #map {
 	width: 69.5%;
-	padding-left: 4%;
 	height: 300px;
 	background-color: #4b8a79;
 	text-align: center;
