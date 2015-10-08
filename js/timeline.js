@@ -1,5 +1,15 @@
 jQuery(document).ready(function(){
 	var $ = jQuery;
+	$('#home').click(function(){
+		$('#summary-2015').css('display', 'inline-block');
+		$('#summary-1920').css('display', 'none');
+		$('#summary-1960').css('display', 'none');
+		$('#summary-1890').css('display', 'none');
+		$('.year2015').css('background-color', '#d1d96a');
+		$('.year1960').css('background-color', '#fff');
+		$('.year1920').css('background-color', '#fff');
+		$('.year1890').css('background-color', '#fff');
+	})
 	$('.year2015').click(function(){
 		$('#summary-2015').css('display', 'inline-block');
 		$('#summary-1920').css('display', 'none');
