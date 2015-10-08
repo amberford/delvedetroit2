@@ -24,19 +24,19 @@ app.controller('mapCtrl', function($scope) {
   var overlay;
   USGSOverlay.prototype = new google.maps.OverlayView();
 
-  var detroit = {lat: 42.3332871, lng: -83.0461940};
+  var detroit = {lat: 42.336813, lng: -83.042773};
 
   // Initialize the map and the custom overlay.
     function initMap() {
       var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 15,
+        zoom: 9,
         center: detroit,
         mapTypeId: google.maps.MapTypeId.SATELLITE
       });
 
       var bounds = new google.maps.LatLngBounds(
-          new google.maps.LatLng(42.320606, -83.092100),
-          new google.maps.LatLng(42.350712, -83.010218));
+        new google.maps.LatLng(42.310356, -83.106147),
+        new google.maps.LatLng(42.362028, -82.980418));
 
       // The photograph is courtesy of the U.S. Geological Survey.
       var srcImage = 'img/maps/map1897cropped2.png';
@@ -44,7 +44,6 @@ app.controller('mapCtrl', function($scope) {
       // The custom USGSOverlay object contains the USGS image,
       // the bounds of the image, and a reference to the map.
       overlay = new USGSOverlay(bounds, srcImage, map);
-      overlay.hide();
 
       // Create the DIV to hold the control and call the CenterControl() constructor
       // passing in this DIV.
