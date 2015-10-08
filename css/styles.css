@@ -51,6 +51,9 @@ nav li a {
 main {
 	width: 75%;
 	margin: 0 auto;
+	padding-bottom: 15px;
+	border-bottom: 2px solid #4b8a79;
+	margin-bottom: 10px;
 }
 .wrapper {
 	margin: auto;
@@ -153,9 +156,6 @@ main {
 	text-align: center;
 	font-family: "Dosis";
 	font-size: 2em;
-	padding-bottom: 10px;
-	border-bottom: 2px solid #4b8a79;
-	margin-bottom: 20px;
 	display: inline-block;
 	vertical-align: top;
 }
