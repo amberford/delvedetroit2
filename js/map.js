@@ -7,6 +7,7 @@ app.controller('mapCtrl', function($scope) {
     initMarkers(oldLocs);
     drawMarkers(oldLocs);
     overlay.show();
+    
   };
 
   $scope.newMap = function() {
