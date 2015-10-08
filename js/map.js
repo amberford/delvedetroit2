@@ -66,6 +66,7 @@ app.controller('mapCtrl', function($scope) {
   ];
 
   var myMap;
+  var infowindow;
   var markers = [];
   var overlay;
   USGSOverlay.prototype = new google.maps.OverlayView();
@@ -83,7 +84,6 @@ app.controller('mapCtrl', function($scope) {
 
       myMap = map;
 
-
       var bounds = new google.maps.LatLngBounds(
         new google.maps.LatLng(42.310356, -83.169016),
         new google.maps.LatLng(42.362028, -83.043287));
@@ -95,12 +95,17 @@ app.controller('mapCtrl', function($scope) {
       // the bounds of the image, and a reference to the map.
       overlay = new USGSOverlay(bounds, srcImage, map);
 
-      var infowindow = new google.maps.InfoWindow;
+      infowindow = new google.maps.InfoWindow;
 
       var marker, i;
+
+      $scope.newMap();
     }
 
     function removeMarkers(){
+      markers.forEach(function(el) {
+        el.setMap(null);
+      });
       markers = [];
     }
 
