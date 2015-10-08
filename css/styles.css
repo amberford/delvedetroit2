@@ -84,7 +84,7 @@ main {
 	position: absolute;
 	top: -10px;
 }
-#year1890 {
+.year1890 {
 	border: 4px solid #d5401d;
 	left: 0;
 }
@@ -107,6 +107,7 @@ main {
 }
 .year2015 {
 	border: 4px solid #d1d96a;
+	background-color: #d1d96a;
 	left: 100%;
 }
 .year2015:hover {
