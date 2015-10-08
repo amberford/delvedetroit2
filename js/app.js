@@ -21,6 +21,11 @@ app.config(function($routeProvider) {
 		controller: '2015Ctrl',
 		templateUrl: 'partials/present-view.html'
 	});
+	$routeProvider.when('/museum',
+	{
+		controller: 'museumCtrl',
+		templateUrl: 'partials/museum-view.html'
+	});
 	$routeProvider.otherwise(
 	{ 
 		redirectTo: '/', 
