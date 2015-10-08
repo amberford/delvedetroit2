@@ -212,8 +212,11 @@ footer {
 
 /* BEGIN MEDIA QUERIES
 ================================================*/
-@media only screen and (-webkit-min-device-pixel-ratio: 2),(min-resolution: 192dpi) {
-  #map {
-  	height: 450px;
-  }
+@media only screen and
+@media	only screen and (-webkit-min-device-pixel-ratio: 1.3),
+only screen and (-o-min-device-pixel-ratio: 13/10),
+only screen and (min-resolution: 120dpi) {
+	#map {
+		height: 450px;
+	}
 }
