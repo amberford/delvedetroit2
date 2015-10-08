@@ -115,6 +115,18 @@ main {
 
 /* TIMELINE CONTENT
 ================================================*/
+#summary-2015 {
+
+}
+#summary-1960 {
+	display: none;
+}
+#summary-1920 {
+	display: none;
+}
+#summary-1890 {
+	display: none;
+}
 .timeline-data {
 	width: 30%;
 	padding-right: 4%;

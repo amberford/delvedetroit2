@@ -8,6 +8,8 @@
 	<script src="https://code.angularjs.org/1.4.7/angular-route.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.1/angular-animate.min.js"></script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-mU4wjJAGmgLzSu-mn2IweeC-ediFn9E&signed_in=true"></script>
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="js/script.js"></script>
 	<script src="js/app.js"></script>
 	<script src="js/map.js"></script>
 	<script src="js/mainCtrl.js"></script>
@@ -29,14 +31,45 @@
 	</nav>
 	<div id="timeline">
 		<a href="#/1890" ng-click="oldMap()"><div class="date year1890">1890</div></a>
-		<a href="#/1920"><div class="date year1920">1920</div></a>
-		<a href="#/1960"><div class="date year1960">1960</div></a>
 		<a href="#/" ng-click="newMap()"><div class="date year2015">2015</div></a>
 	</div>
-	<main id="2015-content">
-		<section class="timeline-data">
+	<main>
+		<section id="summary-2015" class="timeline-data">
 			<h1>The New Detroit</h1>
 			<h4>1990-Present</h4>
+			<p>After years of decay, increasing crime, white flight, bankruptcy, and crooked politics, Detroit is increasingly becoming a city that is prime for a huge turnaround. Tech companies and real estate investors are attracted to the city for it’s low priced downtown real estate and educated regional workforce.</p>
+			<ul>
+				<li>Est. 2014 population 680,250</li>
+				<li>$26,325 median income</li>
+				<li>39% Below Poverty</li>
+				<li>10% White, 83% Black, 7% Hispanic</li>
+			</ul>
+		</section>
+		<section id="summary-1960" class="timeline-data">
+			<h1>Motown and stuff</h1>
+			<h4>1960s</h4>
+			<p>After years of decay, increasing crime, white flight, bankruptcy, and crooked politics, Detroit is increasingly becoming a city that is prime for a huge turnaround. Tech companies and real estate investors are attracted to the city for it’s low priced downtown real estate and educated regional workforce.</p>
+			<ul>
+				<li>Est. 2014 population 680,250</li>
+				<li>$26,325 median income</li>
+				<li>39% Below Poverty</li>
+				<li>10% White, 83% Black, 7% Hispanic</li>
+			</ul>
+		</section>
+		<section id="summary-1920" class="timeline-data">
+			<h1>The twenties</h1>
+			<h4>1920's</h4>
+			<p>After years of decay, increasing crime, white flight, bankruptcy, and crooked politics, Detroit is increasingly becoming a city that is prime for a huge turnaround. Tech companies and real estate investors are attracted to the city for it’s low priced downtown real estate and educated regional workforce.</p>
+			<ul>
+				<li>Est. 2014 population 680,250</li>
+				<li>$26,325 median income</li>
+				<li>39% Below Poverty</li>
+				<li>10% White, 83% Black, 7% Hispanic</li>
+			</ul>
+		</section>
+		<section id="summary-1890" class="timeline-data">
+			<h1>The Old Detroit</h1>
+			<h4>1890's</h4>
 			<p>After years of decay, increasing crime, white flight, bankruptcy, and crooked politics, Detroit is increasingly becoming a city that is prime for a huge turnaround. Tech companies and real estate investors are attracted to the city for it’s low priced downtown real estate and educated regional workforce.</p>
 			<ul>
 				<li>Est. 2014 population 680,250</li>
