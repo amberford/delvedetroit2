@@ -17,15 +17,14 @@ body {
 ================================================*/
 nav {
 	width: 100%;
-	border-bottom: 2px solid #eee;
 }
 header {
-	margin-top: 30px;
-	margin-bottom: 20px;
+	margin-top: 20px;
+	margin-bottom: 10px;
 }
 nav h1 {
 	font-family: "Dosis", sans-serif;
-	font-size: 2.5em;
+	font-size: 2em;
 	text-align: center;
 }
 nav ul {
@@ -36,7 +35,7 @@ nav ul {
 nav li {
 	display: inline-block;
 	background: #eee;
-	padding: 5px 35px;
+	padding: 4px 40px;
 	font-weight: 700;
 	font-size: 0.8em;
 	text-transform: uppercase;
@@ -49,25 +48,25 @@ nav li a {
 /* MAIN
 ================================================*/
 main {
-	width: 75%;
+	width: 77%;
 	margin: 0 auto;
-	padding-bottom: 15px;
-	border-bottom: 2px solid #4b8a79;
-	margin-bottom: 10px;
+	padding-bottom: 20px;
+	border-bottom: 2px solid #ccc;
+	margin-bottom: 20px;
 }
 .wrapper {
 	margin: auto;
-	width: 75%;
+	width: 77%;
 }
 
 /* TIMELINE
 ================================================*/
 #timeline {
-	margin: 40px 0 60px 0;
+	margin: 40px 0 50px 0;
 	margin-left: auto;
 	margin-right: auto;
 	height: 4px;
-	width: 40%;
+	width: 45%;
 	font-weight: 700;
 	font-size: 0.8em;
 	line-height: 5em;
@@ -130,18 +129,15 @@ main {
 .timeline-data h4 {
 	margin-top: 5px;
 	text-transform: uppercase;
-	font-size: 0.85em;
 	color: #666;
 }
 .timeline-data p {
 	margin-top: 15px;
 	color: #666;
-	font-size: 0.85em;
 	line-height: 1.2em;
 }
 .timeline-data ul {
 	margin-top: 20px;
-	font-size: 0.8em;
 }
 .timeline-data li {
 	margin-bottom: 10px;
@@ -151,7 +147,7 @@ main {
 ================================================*/
 #map {
 	width: 69.5%;
-	height: 300px;
+	height: 400px;
 	background-color: #4b8a79;
 	text-align: center;
 	font-family: "Dosis";
@@ -174,17 +170,15 @@ article h3 {
 	text-transform: uppercase;
 	margin-bottom: 7px;
 }
-article p {
-	margin-bottom: 10px;
+article p, aside p {
+	margin-bottom: 7px;
+	font-size: 1.2em;
 }
 aside {
 	padding-right: 2%;
 	margin-bottom: 15px;
 	width: 50%;
 	float: left;
-}
-aside p {
-	margin-bottom: 7px;
 }
 aside h4 {
 	padding: 7px 15px;
@@ -193,7 +187,7 @@ aside h4 {
 	font-family: "Dosis", sans-serif;
 	letter-spacing: 1px;
 	text-transform: uppercase;
-	background-color: #4b8a79;
+	background-color: #8bb7ab;
 	display: inline-block;
 }
 
@@ -209,11 +203,3 @@ footer {
 	clear: both;
 }
 
-
-/* BEGIN MEDIA QUERIES
-================================================*/
-@media only screen and (-webkit-min-device-pixel-ratio: 2),(min-resolution: 192dpi) {
-  #map {
-  	height: 450px;
-  }
-}
