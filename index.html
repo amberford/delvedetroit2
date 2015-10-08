@@ -11,6 +11,7 @@
 	<script src="js/app.js"></script>
 	<script src="js/map.js"></script>
 	<script src="js/mainCtrl.js"></script>
+	<script src="js/museumCtrl.js"></script>
 </head>
 <body ng-controller="mapCtrl">
 	<nav>
@@ -21,27 +22,27 @@
 			<ul>
 				<li><a href="#/">Home</a></li>
 				<li><a href="#/">Link</a></li>
-				<li><a href="#/">Link</a></li>
+				<li><a href="#/museum">Delve Deeper</a></li>
 				<li><a href="#/">About</a></li>
 			</ul>
 		</div>
 	</nav>
 	<div id="timeline">
-		<a href="#/" ng-click="oldMap()"><div class="date year1890">1890</div></a>
+		<a href="#/1890" ng-click="oldMap()"><div class="date year1890">1890</div></a>
 		<a href="#/1920"><div class="date year1920">1920</div></a>
 		<a href="#/1960"><div class="date year1960">1960</div></a>
-		<a href="#/present" ng-click="newMap()"><div class="date year2015">2015</div></a>
+		<a href="#/" ng-click="newMap()"><div class="date year2015">2015</div></a>
 	</div>
-	<main id="1890-content">
+	<main id="2015-content">
 		<section class="timeline-data">
-			<h1>Sample Header</h1>
-			<h4>Years 1920-1929</h4>
-			<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla elementum ut neque eu porttitor. Morbi vehicula dolor nisi, ac ultrices purus dictum at..</p>
+			<h1>The New Detroit</h1>
+			<h4>1990-Present</h4>
+			<p>After years of decay, increasing crime, white flight, bankruptcy, and crooked politics, Detroit is increasingly becoming a city that is prime for a huge turnaround. Tech companies and real estate investors are attracted to the city for it’s low priced downtown real estate and educated regional workforce.</p>
 			<ul>
-				<li>Will add icons next to these points</li>
-				<li>Maybe put information like population etc</li>
-				<li>Per capita etc or murder rate</li>
-				<li>Will add icons next to these points</li>
+				<li>Est. 2014 population 680,250</li>
+				<li>$26,325 median income</li>
+				<li>39% Below Poverty</li>
+				<li>10% White, 83% Black, 7% Hispanic</li>
 			</ul>
 		</section>
 		<div id="map"></div>
