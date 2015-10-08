@@ -19,12 +19,17 @@ app.config(function($routeProvider) {
 	$routeProvider.when('/1890',
 	{
 		controller: '1890Ctrl',
-		templateUrl: 'partials/main-view.html'
+		templateUrl: 'partials/1890-view.html'
 	});
 	$routeProvider.when('/museum',
 	{
 		controller: 'museumCtrl',
 		templateUrl: 'partials/museum-view.html'
+	});
+	$routeProvider.when('/about',
+	{
+		controller: 'aboutCtrl',
+		templateUrl: 'partials/about-view.html'
 	});
 	$routeProvider.otherwise(
 	{ 

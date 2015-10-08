@@ -77,7 +77,7 @@ app.controller('mapCtrl', function($scope) {
   // Initialize the map and the custom overlay.
     function initMap() {
       var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 15,
+        zoom: 14,
         center: detroit,
         mapTypeId: google.maps.MapTypeId.SATELLITE
       });
@@ -88,11 +88,8 @@ app.controller('mapCtrl', function($scope) {
         new google.maps.LatLng(42.310356, -83.169016),
         new google.maps.LatLng(42.362028, -83.043287));
 
-      // The photograph is courtesy of the U.S. Geological Survey.
       var srcImage = 'img/maps/map1897cropped2.png';
 
-      // The custom USGSOverlay object contains the USGS image,
-      // the bounds of the image, and a reference to the map.
       overlay = new USGSOverlay(bounds, srcImage, map);
 
       infowindow = new google.maps.InfoWindow;
@@ -113,8 +110,8 @@ app.controller('mapCtrl', function($scope) {
       for (i = 0; i < markerArray.length; i++) {  
         marker = new google.maps.Marker({
           position: new google.maps.LatLng(markerArray[i][1], markerArray[i][2]),
-            animation: google.maps.Animation.DROP,
-              map: myMap
+          animation: google.maps.Animation.DROP,
+          map: myMap
         }); 
         google.maps.event.addListener(marker, 'click', (function(marker, i) {
           return function() {
@@ -132,30 +129,17 @@ app.controller('mapCtrl', function($scope) {
       }
     }
 
-    // [START region_constructor]
-    /** @constructor */
     function USGSOverlay(bounds, image, map) {
 
-      // Initialize all properties.
       this.bounds_ = bounds;
       this.image_ = image;
       this.map_ = map;
 
-      // Define a property to hold the image's div. We'll
-      // actually create this div upon receipt of the onAdd()
-      // method so we'll leave it null for now.
       this.div_ = null;
 
-      // Explicitly call setMap on this overlay.
       this.setMap(map);
     }
-    // [END region_constructor]
 
-    // [START region_attachment]
-    /**
-     * onAdd is called when the map's panes are ready and the overlay has been
-     * added to the map.
-     */
     USGSOverlay.prototype.onAdd = function() {
 
       var div = document.createElement('div');
@@ -163,7 +147,6 @@ app.controller('mapCtrl', function($scope) {
       div.style.borderWidth = '0px';
       div.style.position = 'absolute';
 
-      // Create the img element and attach it to the div.
       var img = document.createElement('img');
       img.src = this.image_;
       img.style.width = '100%';
@@ -173,41 +156,30 @@ app.controller('mapCtrl', function($scope) {
 
       this.div_ = div;
 
-      // Add the element to the "overlayLayer" pane.
       var panes = this.getPanes();
       panes.overlayLayer.appendChild(div);
       overlay.hide();
     };
-    // [END region_attachment]
 
-    // [START region_drawing]
     USGSOverlay.prototype.draw = function() {
 
-      // We use the south-west and north-east
-      // coordinates of the overlay to peg it to the correct position and size.
-      // To do this, we need to retrieve the projection from the overlay.
       var overlayProjection = this.getProjection();
-      // Retrieve the south-west and north-east coordinates of this overlay
-      // in LatLngs and convert them to pixel coordinates.
-      // We'll use these coordinates to resize the div.
+
       var sw = overlayProjection.fromLatLngToDivPixel(this.bounds_.getSouthWest());
       var ne = overlayProjection.fromLatLngToDivPixel(this.bounds_.getNorthEast());
 
-      // Resize the image's div to fit the indicated dimensions.
       var div = this.div_;
       div.style.left = sw.x + 'px';
       div.style.top = ne.y + 'px';
       div.style.width = (ne.x - sw.x) + 'px';
       div.style.height = (sw.y - ne.y) + 'px';
     };
-    // [END region_drawing]
 
     USGSOverlay.prototype.onRemove = function() {
       this.div_.parentNode.removeChild(this.div_);
       this.div_ = null;
     };
 
-    // Set the visibility to 'hidden' or 'visible'.
     USGSOverlay.prototype.hide = function() {
       if (this.div_) {
         this.div_.style.visibility = 'hidden';

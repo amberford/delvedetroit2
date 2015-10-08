@@ -4,6 +4,10 @@ app.controller('mainCtrl', function() {
 
 });
 
+app.controller('1890Ctrl', function() {
+
+});
+
 app.controller('1920Ctrl', function() {
 
 });
