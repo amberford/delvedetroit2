@@ -1,5 +1,11 @@
 jQuery(document).ready(function(){
 	var $ = jQuery;
+	$('#deeper').click(function(){
+
+	})
+	$('#about').click(function(){
+		
+	})
 	$('#home').click(function(){
 		$('#summary-2015').css('display', 'inline-block');
 		$('#summary-1920').css('display', 'none');
