@@ -188,7 +188,6 @@ article {
 }
 article h3, .title {
 	font-family: "Dosis";
-	font-size: 1.5em;
 	text-transform: uppercase;
 	margin-bottom: 7px;
 }
@@ -270,14 +269,14 @@ footer {
 		font-size: 1.2em;
 	}
 	.timeline-data ul {
-		font-size: 1em;
+		font-size: 1.2em;
 	}
 	.timeline-data li {
 		margin-bottom: 10px;
 	}
 	article p {
 		margin-bottom: 7px;
-		font-size: 1em;
+		font-size: 1.2em;
 	}
 	aside figcaption {
 		margin-top: 5px;
@@ -287,6 +286,9 @@ footer {
 	}
 	.timeline-data h4 {
 		font-size: 1.2em;
+	}
+	article h3, .title {
+	font-size: 1.8em;
 	}
 }
 
@@ -315,5 +317,8 @@ footer {
 	}
 	.timeline-data h4 {
 		font-size: 1em;
+	}
+	article h3, .title {
+	font-size: 1.5em;
 	}
 }
