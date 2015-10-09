@@ -101,6 +101,7 @@ app.controller('mapCtrl', function($scope) {
 
       if(navigator.geolocation) {
         browserSupportFlag = true;
+        console.log(position.coords.latitude + " lat " + latitude.coords.longitude + " long");
         navigator.geolocation.getCurrentPosition(function(position) {
           initialLocation = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
           map.setCenter(initialLocation);
@@ -135,6 +136,7 @@ app.controller('mapCtrl', function($scope) {
               infowindow.open(myMap, marker);
           }
         })(marker, i));
+
         markers.push(marker);
       }
     }
