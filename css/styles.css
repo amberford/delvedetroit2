@@ -160,7 +160,6 @@ main {
 ================================================*/
 #map {
 	width: 69.5%;
-	height: 400px;
 	background-color: #4b8a79;
 	text-align: center;
 	font-family: "Dosis";
@@ -190,13 +189,16 @@ article h3 {
 }
 article p, aside p {
 	margin-bottom: 7px;
-	font-size: 1.2em;
+	font-size: 1em;
 }
 aside {
 	padding-right: 2%;
 	margin-bottom: 15px;
-	width: 50%;
+	width: 33%;
 	float: left;
+}
+aside img {
+	width: 100%;
 }
 aside h4 {
 	padding: 7px 15px;
@@ -221,3 +223,17 @@ footer {
 	clear: both;
 }
 
+/* MEDIA QUERIES
+================================================*/
+
+@media screen and (min-width: 1920px) {
+	#map {
+		height: 450px;
+	}
+}
+
+@media screen and (max-width: 1919px) {
+	#map {
+		height: 300px;
+	}
+}
