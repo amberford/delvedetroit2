@@ -80,7 +80,7 @@ app.controller('mapCtrl', function($scope) {
       var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 14,
         center: detroit,
-        mapTypeId: google.maps.MapTypeId.SATELLITE
+        mapTypeId: google.maps.MapTypeId.ROADMAP
       });
 
       myMap = map;
