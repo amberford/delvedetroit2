@@ -85,11 +85,11 @@ main {
 	top: -10px;
 }
 .year1890 {
-	border: 4px solid #d5401d;
+	border: 4px solid #f28d3f;
 	left: 0;
 }
 .year1890:hover {
-	background-color: #d5401d;
+	background-color: #f28d3f;
 }
 .year1920 {
 	border: 4px solid #4b8a79;
@@ -140,20 +140,17 @@ main {
 	text-transform: uppercase;
 }
 .timeline-data h4 {
-	margin-top: 5px;
 	text-transform: uppercase;
-	color: #666;
+	letter-spacing: 1px;
 }
 .timeline-data p {
 	margin-top: 15px;
 	color: #666;
-	line-height: 1.2em;
 }
 .timeline-data ul {
 	margin-top: 20px;
-}
-.timeline-data li {
-	margin-bottom: 10px;
+	list-style: none;
+	font-weight: 
 }
 
 /* MAP
@@ -181,15 +178,10 @@ article {
 	float: left;
 }
 article h3 {
-	color: #4b8a79;
 	font-family: "Dosis";
 	font-size: 1.5em;
 	text-transform: uppercase;
 	margin-bottom: 7px;
-}
-article p, aside p {
-	margin-bottom: 7px;
-	font-size: 1em;
 }
 aside {
 	padding-right: 2%;
@@ -210,7 +202,21 @@ aside h4 {
 	background-color: #8bb7ab;
 	display: inline-block;
 }
-
+.bold {
+	font-weight: 700;
+}
+.orange {
+	color: #f28d3f;
+}
+.teal {
+	color: #4b8a79;
+}
+.burgundy {
+	color: #8c1e1d;
+}
+.chartreuse {
+	color: #d1d96a;
+}
 /* FOOTER
 ================================================*/
 footer {
@@ -228,12 +234,56 @@ footer {
 
 @media screen and (min-width: 1920px) {
 	#map {
-		height: 700px;
+		height: 450px;
+	}
+	.timeline-data p {
+		font-size: 1.2em;
+	}
+	.timeline-data ul {
+		font-size: 1em;
+	}
+	.timeline-data li {
+		margin-bottom: 10px;
+	}
+	article p {
+		margin-bottom: 7px;
+		font-size: 1em;
+	}
+	aside figcaption {
+		margin-top: 5px;
+		margin-bottom: 7px;
+		font-size: 0.85em;
+		font-weight: 700;
+	}
+	.timeline-data h4 {
+		font-size: 1.2em;
 	}
 }
 
 @media screen and (max-width: 1919px) {
 	#map {
-		height: 300px;
+		height: 325px;
+	}
+	.timeline-data p {
+		font-size: 0.9em;
+	}
+	.timeline-data ul {
+		font-size: 0.9em;
+	}
+	.timeline-data li {
+		margin-bottom: 7px;
+	}
+	article p {
+		margin-bottom: 7px;
+		font-size: 1em;
+	}
+	aside figcaption {
+		margin-top: 5px;
+		margin-bottom: 7px;
+		font-size: 0.85em;
+		font-weight: 700;
+	}
+	.timeline-data h4 {
+		font-size: 1em;
 	}
 }
