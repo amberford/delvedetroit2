@@ -74,6 +74,9 @@ main {
 	text-align: center;
 	position: relative;
 }
+#timeline a {
+	color: #000;
+}
 .date {
 	width: 25px;
 	height: 25px;
@@ -89,21 +92,21 @@ main {
 	left: 0;
 }
 .year1890:hover {
-	background-color: #f28d3f;
+	background-color: #f28d3f !important;
 }
 .year1920 {
 	border: 4px solid #4b8a79;
 	left: 25%;
 }
 .year1920:hover {
-	background-color: #4b8a79;
+	background-color: #4b8a79 !important;
 }
 .year1960 {
 	border: 4px solid #8c1e1d;
 	left: 60%;
 }
 .year1960:hover {
-	background-color: #8c1e1d;
+	background-color: #8c1e1d !important;
 }
 .year2015 {
 	border: 4px solid #d1d96a;
@@ -111,7 +114,7 @@ main {
 	left: 100%;
 }
 .year2015:hover {
-	background-color: #d1d96a;
+	background-color: #d1d96a !important;
 }
 
 /* TIMELINE CONTENT
@@ -144,11 +147,11 @@ main {
 	letter-spacing: 1px;
 }
 .timeline-data p {
-	margin-top: 15px;
+	margin: 15px 0;
 	color: #666;
 }
 .timeline-data ul {
-	margin-top: 20px;
+	margin-bottom: 20px;
 	list-style: none;
 	font-weight: 
 }
@@ -177,7 +180,7 @@ article {
 	padding: 0 0 20px 0;
 	float: left;
 }
-article h3 {
+article h3, .title {
 	font-family: "Dosis";
 	font-size: 1.5em;
 	text-transform: uppercase;
@@ -192,6 +195,16 @@ aside {
 aside img {
 	width: 100%;
 }
+#pingree img {
+	width: 20%;
+	display: inline-block;
+	vertical-align: top
+}
+#pingree p {
+	width: 100%;
+	display: inline-block;
+	vertical-align: top;
+}
 aside h4 {
 	padding: 7px 15px;
 	margin-bottom: 10px;
@@ -199,7 +212,6 @@ aside h4 {
 	font-family: "Dosis", sans-serif;
 	letter-spacing: 1px;
 	text-transform: uppercase;
-	background-color: #8bb7ab;
 	display: inline-block;
 }
 .bold {
@@ -216,6 +228,18 @@ aside h4 {
 }
 .chartreuse {
 	color: #d1d96a;
+}
+.bg-orange {
+	background-color: #f28d3f;
+}
+.bg-teal {
+	background-color: #4b8a79;
+}
+.bg-burgundy {
+	background-color: #8c1e1d;
+}
+.bg-chartreuse {
+	background-color: #d1d96a;
 }
 /* FOOTER
 ================================================*/
