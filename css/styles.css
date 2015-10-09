@@ -158,8 +158,10 @@ main {
 }
 .timeline-data ul {
 	margin-bottom: 20px;
-	list-style: none;
 	font-weight: 
+}
+.overview li {
+	list-style: none;
 }
 
 /* MAP
