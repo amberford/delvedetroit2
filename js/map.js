@@ -18,16 +18,15 @@ app.controller('mapCtrl', function($scope) {
   };
 
   var oldLocs = [
-    ['1896- On June 4th, Henry Ford drives his first automobile through the streets of Detroit.', 42.338041, -83.051588, 17],
-    ["1896- Central High School is built on the corner of Cass and Warren. Today, it is Wayne State University's Old Main building.", 42.355046, -83.067359, 18],
-    ["1896- The last horse-drawn carriage is replaced by electric trolleys.", 42.347054, -83.055765, 19],
+    ['The Detroit Dry Dock Company was here. The company employed 600 people and built more ships than any other company in America in the 1890s.', 42.333359, -83.027398, 17],
+    ["Detroit Stove Works was here. It was a major stove maker that had 1300-1400 employees in the 1890s. They produced 80,000 stoves annually and had more than 700 designs.", 42.346924, -83.003869, 18],
+    ["1897- Sebastian S. Kresge opened his first 5 and 10 cent store here. It eventually develops into present day Kmart", 42.333416, -83.048587, 19],
     ["1892- Four Detroit streets (Jefferson, Lafayette, Cass and Second) are paved with asphalt. The rest are cobblestone, cedar block or unpaved.", 42.331389, -83.038246, 20],
-    ["1893- Detroiter Marie Owen beomes the first policewoman in the United States.", 42.346292, -83.078598, 21],
+    ["1896- Charles Brady King drives Detroit’s first gasoline powered car down Woodward Avenue", 42.335909, -83.050503, 21],
     ["1899- William Metzger and Seneca Lewis organize Detroit's first auto show. They showed 4 cars; 2 electric and 2 steam powered.", 42.338560, -83.028546, 22], 
-    ["1895- The Detroit Public Schools establish Kindergartens.", 42.333921, -83.054699, 23],
-    ["1895- Detroit begins to supply power for streetlights and public buildings.", 42.335646, -83.041582, 24],
-    ["1890- Detroit's population is 205,876; the 15th largest city in America.", 42.336657, -83.046571, 25],
-  ];
+    ["1899- Ransom E. Olds opens Detroit's first automobile manufacturing plant here.", 42.339602, -83.019011, 23],
+    ["The Michigan Stove Company was here. It was a major stove maker that had 1200 employees. They produced 76,000 stoves annually and had over 200 designs.", 42.344329, -83.013808, 24]
+    ];
 
   var twentiesLocs = [  
     ['1921- The Detroit Public Library was built at 5201 Woodward Avenue.', 42.358385, -83.066724, 9],
