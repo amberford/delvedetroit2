@@ -262,6 +262,9 @@ aside h4 {
 .chartreuse {
 	color: #d1d96a;
 }
+.deeppink{
+	color: #EE1289;
+}
 .bg-orange {
 	background-color: #f28d3f;
 }
@@ -273,6 +276,10 @@ aside h4 {
 }
 .bg-chartreuse {
 	background-color: #d1d96a;
+}
+
+a:link{
+	color: #EE1289;
 }
 /* FOOTER
 ================================================*/
