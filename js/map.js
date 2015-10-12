@@ -41,11 +41,10 @@ app.controller('mapCtrl', function($scope) {
   ];
 
   var sixtiesLocs = [
-    ['1960- Berry Gordy incorporated Tamla Records as Motown Record Company on April 14th. Motown achieved spectacular success for a small record company: 79 records in the Top Ten of the Billboard Hot 100 record chart between 1960 and 1969. ', 42.364170, -83.088545, 1],
-    ['1960- Detroit had the highest per capita income in the United States.', 42.3314, -83.0458, 2],
-    ['1963- Martin Luther King delivered his I Have a Dream speech for the first time at Cobo Hall, during the Walk to Freedom march. This civil rights march drew crowds of an estimated 125,000 and was the largest civil rights demonstration in U.S. history up to that date.', 42.332085, -83.049964, 3],
+    ['1961- Eleven year old Stevie Wonder signs with Motown', 42.364230, -83.088507, 2],
+    ['1963- Dr. King delivered the I Have a Dream speech for the first time at Cobo Hall.', 42.332085, -83.049964, 3],
     ['1964- Dr. Charles Wright opens the International Afro-American Museum in his office on West Grand Boulevard.', 42.345018, -83.107840, 4],
-    ['1965- On March 6th, My Girl by The Temptations became the #1 song on the Billboard Hot 100 charts.', 42.364080, -83.088387, 5],
+    ['1964- On September 6th, The Beatles performed in Detroit for the first time at the Olympia Stadium.', 42.353641, -83.101121, 5],
     ["1965- The Charles H. Wright Museum of African American History is founded. It holds the world's largest permanent exhibit on African American culture.", 42.359083, -83.061005, 26],
     ['1968- The Detroit Tigers win the World Series against the St. Louis Cardinals.', 42.331944, -83.068889, 6],
     ['1969- In January, I Heard it Through the Grapevine by Marvin Gaye becomes the #1 song on the Billboard Hot 100 charts.', 42.363989, -83.088298, 7],
