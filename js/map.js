@@ -8,6 +8,14 @@ app.controller('mapCtrl', function($scope) {
     drawMarkers(oldLocs);
     overlay.show();
     
+  }; 
+
+  $scope.sixtiesMap = function() {
+    removeMarkers();
+    initMarkers(sixtiesLocs);
+    drawMarkers(sixtiesLocs);
+    overlay.show();
+    
   };
 
   $scope.newMap = function() {
@@ -41,14 +49,14 @@ app.controller('mapCtrl', function($scope) {
   ];
 
   var sixtiesLocs = [
-    ['1961- Eleven year old Stevie Wonder signs with Motown', 42.364230, -83.088507, 2],
+    ['1961- Eleven year old Stevie Wonder signs with Motown', 42.364448, -83.087490, 2],
     ['1963- Dr. King delivered the I Have a Dream speech for the first time at Cobo Hall.', 42.332085, -83.049964, 3],
-    ['1964- Dr. Charles Wright opens the International Afro-American Museum in his office on West Grand Boulevard.', 42.345018, -83.107840, 4],
+    ['1964- Dr. Charles Wright opens the International Afro-American Museum in his office on West Grand Boulevard.', 42.357764, -83.106319, 4],
     ['1964- On September 6th, The Beatles performed in Detroit for the first time at the Olympia Stadium.', 42.353641, -83.101121, 5],
     ["1965- The Charles H. Wright Museum of African American History is founded. It holds the world's largest permanent exhibit on African American culture.", 42.359083, -83.061005, 26],
     ['1968- The Detroit Tigers win the World Series against the St. Louis Cardinals.', 42.331944, -83.068889, 6],
-    ['1969- In January, I Heard it Through the Grapevine by Marvin Gaye becomes the #1 song on the Billboard Hot 100 charts.', 42.363989, -83.088298, 7],
-    ['1967- The 12th Street Riot lasted from July 23rd - July 27th. To help end the disturbance, Governor George W. Romney ordered the Michigan Army National Guard into Detroit, and President Lyndon B. Johnson sent in both the 82nd and 101st Airborne Divisions. The result was 43 dead, 1,189 injured, over 7,200 arrests, and more than 2,000 buildings destroyed.', 42.376389, -83.099444, 8]
+    ['1969- In January, I Heard it Through the Grapevine by Marvin Gaye becomes the #1 song on the Billboard Hot 100 charts.', 42.363930, -83.088793, 7],
+    ['1967- The 12th Street Riot lasted from July 23rd - July 27th. The result was 43 dead, 1,189 injured, over 7,200 arrests, and more than 2,000 buildings destroyed. To help end the disturbance, Governor George W. Romney ordered the Michigan Army National Guard into Detroit, and President Lyndon B. Johnson sent in both the 82nd and 101st Airborne Divisions.', 42.376389, -83.099444, 8]
   ];
 
   var newLocs = [
