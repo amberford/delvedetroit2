@@ -2,19 +2,41 @@ var app = angular.module('delveApp');
 
 app.controller('mapCtrl', function($scope) { 
 
-  $scope.oldMap = function() {
+  $scope.get1890Map = function() {
     removeMarkers();
     initMarkers(oldLocs);
     drawMarkers(oldLocs);
-    overlay.show();
-    
+    overlay1890.show();
+    overlay1920.hide();
   };
 
-  $scope.newMap = function() {
+  $scope.get1920Map = function() {
+    removeMarkers();
+    initMarkers(twentiesLocs);
+    drawMarkers(twentiesLocs);
+    overlay1890.hide();
+    overlay1920.show();    
+  };
+
+  $scope.get1960Map = function() {
+    removeMarkers();
+    initMarkers(sixtiesLocs);
+    drawMarkers(sixtiesLocs);
+    overlay1890.hide();
+    overlay1920.hide();    
+  };
+
+  $scope.get2015Map = function() {
     removeMarkers();
     initMarkers(newLocs);
     drawMarkers(newLocs);
-    overlay.hide();
+    overlay1890.hide();
+    overlay1920.hide();
+  };
+
+  $scope.updateContent = function() {
+      console.log('test');
+      infowindow.setContent('<input type="text" placeholder="Write your content here"/>');
   };
 
   var oldLocs = [
@@ -66,54 +88,49 @@ app.controller('mapCtrl', function($scope) {
     ["2013- Rock Gaming, the company of Quicken Loans founder Dan Gilbert, agreed to buy a majority stake in Greektown; as part of Gilbert's plan to help revitalize downtown Detroit.", 42.335091, -83.041370, 37]
   ];
 
-  var myMap;
+  var map;
   var infowindow;
   var markers = [];
-  var overlay;
+  var overlay1890;
+  var overlay1920;
   USGSOverlay.prototype = new google.maps.OverlayView();
 
 
   var detroit = {lat: 42.336813, lng: -83.042773};
 
-  // Initialize the map and the custom overlay.
+  // Initialize the map and the custom overlays.
     function initMap() {
-      var map = new google.maps.Map(document.getElementById('map'), {
+      map = new google.maps.Map(document.getElementById('map'), {
         zoom: 14,
         center: detroit,
         mapTypeId: google.maps.MapTypeId.ROADMAP
       });
 
-      myMap = map;
-
-      var bounds = new google.maps.LatLngBounds(
+      var bounds1890 = new google.maps.LatLngBounds(
         new google.maps.LatLng(42.310356, -83.169016),
         new google.maps.LatLng(42.362028, -83.043287));
 
-      var srcImage = 'img/maps/map1897cropped2.png';
+      var bounds1920 = new google.maps.LatLngBounds(
+        new google.maps.LatLng(42.257302, -83.476492),
+        new google.maps.LatLng(42.447800, -83.099120));
 
-      overlay = new USGSOverlay(bounds, srcImage, map);
+      //nw: 42.450185, -83.098850  -83.098580 -82.910401 -83.286498
+
+      var src1890Map = 'img/maps/map1897cropped2.png';
+      var src1920Map = 'img/maps/map1950.png';
+
+      overlay1890 = new USGSOverlay(bounds1890, src1890Map, map);
+      overlay1920 = new USGSOverlay(bounds1920, src1920Map, map);
 
       infowindow = new google.maps.InfoWindow;
 
       var marker, i;
 
-      $scope.newMap();
+      map.addListener('click', function(event) {
+        addMarker(event.latLng);
+      });
 
-      if(navigator.geolocation) {
-        browserSupportFlag = true;
-        console.log(position.coords.latitude + " lat " + latitude.coords.longitude + " long");
-        navigator.geolocation.getCurrentPosition(function(position) {
-          initialLocation = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
-          map.setCenter(initialLocation);
-        }, function() {
-          handleNoGeolocation(browserSupportFlag);
-        });
-        var youAreHere = new google.maps.Marker({
-          position: initialLocation,
-          animation: google.maps.Animation.DROP,
-          map: myMap
-        });
-      }
+      $scope.get2015Map();
     }
 
     function removeMarkers(){
@@ -128,12 +145,12 @@ app.controller('mapCtrl', function($scope) {
         marker = new google.maps.Marker({
           position: new google.maps.LatLng(markerArray[i][1], markerArray[i][2]),
           animation: google.maps.Animation.DROP,
-          map: myMap
+          map: map
         }); 
         google.maps.event.addListener(marker, 'click', (function(marker, i) {
           return function() {
             infowindow.setContent(markerArray[i][0]);
-              infowindow.open(myMap, marker);
+            infowindow.open(map, marker);
           }
         })(marker, i));
 
@@ -143,9 +160,67 @@ app.controller('mapCtrl', function($scope) {
 
     function drawMarkers() {
       for (var i = 0; i < markers.length; i++) {
-        markers[i].setMap(myMap);
+        markers[i].setMap(map);
       }
     }
+
+    function addMarker(coords) {
+      marker = new google.maps.Marker({
+          position: coords,
+          animation: google.maps.Animation.DROP,
+          map: map
+      });
+
+      marker.set("editing", false);
+
+      var htmlBox = document.createElement("div");
+      htmlBox.innerHTML = "test";
+      htmlBox.style.width = "300px";
+      htmlBox.style.height = "100px";
+
+      var textBox = document.createElement("textarea");
+      textBox.innerText = "test";
+      textBox.style.width = "300px";
+      textBox.style.height = "100px";
+      textBox.style.display = "none";
+
+      var container = document.createElement("div");
+      container.style.position = "relative";
+      container.appendChild(htmlBox);
+      container.appendChild(textBox);
+    
+      var editBtn = document.createElement("button");
+      editBtn.innerText = "Edit";
+      container.appendChild(editBtn);
+    
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+          infowindow.setContent(container);
+          infowindow.open(map, marker);
+        }
+      })(marker, i));
+
+      google.maps.event.addDomListener(editBtn, "click", function() {
+        marker.set("editing", !marker.editing);
+      });
+
+      google.maps.event.addListener(marker, "editing_changed", function(){
+        textBox.style.display = this.editing ? "block" : "none";
+        htmlBox.style.display = this.editing ? "none" : "block";
+      });
+
+      google.maps.event.addListener(marker, "editing_changed", function(){
+        textBox.style.display = this.editing ? "block" : "none";
+        htmlBox.style.display = this.editing ? "none" : "block";
+      });
+      
+      google.maps.event.addDomListener(textBox, "change", function(){
+        htmlBox.innerHTML = textBox.value;
+        marker.set("html", textBox.value);
+      });
+    }
+
+    
 
     function USGSOverlay(bounds, image, map) {
 
@@ -176,7 +251,8 @@ app.controller('mapCtrl', function($scope) {
 
       var panes = this.getPanes();
       panes.overlayLayer.appendChild(div);
-      overlay.hide();
+      overlay1890.hide();
+      overlay1920.hide();
     };
 
     USGSOverlay.prototype.draw = function() {
