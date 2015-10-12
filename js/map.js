@@ -25,6 +25,13 @@ app.controller('mapCtrl', function($scope) {
     overlay.hide();
   };
 
+  $scope.museumMap = function() {
+    removeMarkers();
+    initMarkers(museumLocs);
+    drawMarkers(museumLocs);
+    overlay.hide();
+  };
+
   var oldLocs = [
     ['The Detroit Dry Dock Company was here. The company employed 600 people and built more ships than any other company in America in the 1890s.', 42.333359, -83.027398, 17],
     ["Detroit Stove Works was here. It was a major stove maker that had 1300-1400 employees in the 1890s. They produced 80,000 stoves annually and had more than 700 designs.", 42.346924, -83.003869, 18],
@@ -70,6 +77,12 @@ app.controller('mapCtrl', function($scope) {
     ['1999- The Motor City Casino Hotel opened on December 14th. The $825 million complex incorporates a historic building that once housed the Wagner Baking Company, makers of Wonder Bread. The building includes a 100,000 square-foot casino with approximately 3,000 slot machines, a 13,000-square-foot spa, a live music theater and a luxury hotel. It was purchased by Marian Ilitch of IH Gaming (Detroit Entertainment, LLC and owner of Little Ceasars).', 42.3390,-83.0690, 35],
     ['2007 - The Greektown Casino Hotel opened November 15th with a 13-story, 3,500-space parking garage.', 42.3345, -83.0412, 36],
     ["2013- Rock Gaming, the company of Quicken Loans founder Dan Gilbert, agreed to buy a majority stake in Greektown; as part of Gilbert's plan to help revitalize downtown Detroit.", 42.335091, -83.041370, 37]
+  ];
+
+   var museumLocs = [
+    ["Detroit Historical Museum", 42.359816, -83.066852, 38],
+    ['Detroit Institute of Arts', 42.359220, -83.064483, 39],
+    ["Motown Museum", 42.364072,-83.088293, 40]
   ];
 
   var myMap;
