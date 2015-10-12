@@ -1,5 +1,11 @@
 jQuery(document).ready(function(){
 	var $ = jQuery;
+	$('#deeper').click(function(){
+
+	})
+	$('#about').click(function(){
+		
+	})
 	$('#home').click(function(){
 		$('#summary-2015').css('display', 'inline-block');
 		$('#summary-1920').css('display', 'none');
@@ -48,6 +54,6 @@ jQuery(document).ready(function(){
 		$('.year2015').css('background-color', '#fff');
 		$('.year1960').css('background-color', '#fff');
 		$('.year1920').css('background-color', '#fff');
-		$('.year1890').css('background-color', '#d5401d');
+		$('.year1890').css('background-color', '#f28d3f');
 	})
 })

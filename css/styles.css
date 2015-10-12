@@ -19,7 +19,7 @@ nav {
 	width: 100%;
 }
 header {
-	margin-top: 20px;
+	margin-top: 40px;
 	margin-bottom: 10px;
 }
 nav h1 {
@@ -35,14 +35,20 @@ nav ul {
 nav li {
 	display: inline-block;
 	background: #eee;
+	color: black;
 	padding: 4px 40px;
 	font-weight: 700;
 	font-size: 0.8em;
 	text-transform: uppercase;
 }
 nav li a {
-	color: black;
 	text-decoration: none;
+}
+nav li:hover {
+	background: #ddd;
+}
+nav li:active {
+	background: #ccc;
 }
 
 /* MAIN
@@ -74,6 +80,9 @@ main {
 	text-align: center;
 	position: relative;
 }
+#timeline a {
+	color: #000;
+}
 .date {
 	width: 25px;
 	height: 25px;
@@ -85,25 +94,25 @@ main {
 	top: -10px;
 }
 .year1890 {
-	border: 4px solid #d5401d;
+	border: 4px solid #f28d3f;
 	left: 0;
 }
 .year1890:hover {
-	background-color: #d5401d;
+	background-color: #f28d3f !important;
 }
 .year1920 {
 	border: 4px solid #4b8a79;
 	left: 25%;
 }
 .year1920:hover {
-	background-color: #4b8a79;
+	background-color: #4b8a79 !important;
 }
 .year1960 {
 	border: 4px solid #8c1e1d;
 	left: 60%;
 }
 .year1960:hover {
-	background-color: #8c1e1d;
+	background-color: #8c1e1d !important;
 }
 .year2015 {
 	border: 4px solid #d1d96a;
@@ -111,7 +120,7 @@ main {
 	left: 100%;
 }
 .year2015:hover {
-	background-color: #d1d96a;
+	background-color: #d1d96a !important;
 }
 
 /* TIMELINE CONTENT
@@ -140,22 +149,39 @@ main {
 	text-transform: uppercase;
 }
 .timeline-data h4 {
-	margin-top: 5px;
 	text-transform: uppercase;
-	color: #666;
+	letter-spacing: 1px;
 }
 .timeline-data p {
-	margin-top: 15px;
+	margin: 15px 0;
 	color: #666;
-	line-height: 1.2em;
 }
 .timeline-data ul {
-	margin-top: 20px;
+	margin-bottom: 20px;
+	font-weight: 
 }
-.timeline-data li {
+.overview li {
+	list-style: none;
+	display: block;
+	clear: both;
+	padding: 7px 3px;
 	margin-bottom: 10px;
 }
-
+.overview li:nth-child(odd) {
+	background: #f5f5f5;
+}
+.bold-year {
+	width: 10%;
+	font-weight: 700;
+	display: inline-block;
+	vertical-align: top;
+}
+.right {
+	width: 86%;
+	margin-left: 3%;
+	display: inline-block;
+	vertical-align: top;
+}
 /* MAP
 ================================================*/
 #map {
@@ -180,16 +206,10 @@ article {
 	padding: 0 0 20px 0;
 	float: left;
 }
-article h3 {
-	color: #4b8a79;
+article h3, .title {
 	font-family: "Dosis";
-	font-size: 1.5em;
 	text-transform: uppercase;
 	margin-bottom: 7px;
-}
-article p, aside p {
-	margin-bottom: 7px;
-	font-size: 1em;
 }
 aside {
 	padding-right: 2%;
@@ -200,6 +220,16 @@ aside {
 aside img {
 	width: 100%;
 }
+#pingree img {
+	width: 20%;
+	display: inline-block;
+	vertical-align: top
+}
+#pingree p {
+	width: 100%;
+	display: inline-block;
+	vertical-align: top;
+}
 aside h4 {
 	padding: 7px 15px;
 	margin-bottom: 10px;
@@ -207,10 +237,35 @@ aside h4 {
 	font-family: "Dosis", sans-serif;
 	letter-spacing: 1px;
 	text-transform: uppercase;
-	background-color: #8bb7ab;
 	display: inline-block;
 }
-
+.bold, #year {
+	font-weight: 700;
+}
+.orange {
+	color: #f28d3f;
+}
+.teal {
+	color: #4b8a79;
+}
+.burgundy {
+	color: #8c1e1d;
+}
+.chartreuse {
+	color: #d1d96a;
+}
+.bg-orange {
+	background-color: #f28d3f;
+}
+.bg-teal {
+	background-color: #4b8a79;
+}
+.bg-burgundy {
+	background-color: #8c1e1d;
+}
+.bg-chartreuse {
+	background-color: #d1d96a;
+}
 /* FOOTER
 ================================================*/
 footer {
@@ -228,12 +283,62 @@ footer {
 
 @media screen and (min-width: 1920px) {
 	#map {
-		height: 700px;
+		height: 450px;
+	}
+	.timeline-data p {
+		font-size: 1.2em;
+	}
+	.timeline-data ul {
+		font-size: 1.2em;
+	}
+	.timeline-data li {
+		margin-bottom: 10px;
+	}
+	article p {
+		margin-bottom: 7px;
+		font-size: 1.2em;
+	}
+	aside figcaption {
+		margin-top: 5px;
+		margin-bottom: 7px;
+		font-size: 0.85em;
+		font-weight: 700;
+	}
+	.timeline-data h4 {
+		font-size: 1.2em;
+	}
+	article h3, .title {
+	font-size: 1.8em;
 	}
 }
 
 @media screen and (max-width: 1919px) {
 	#map {
-		height: 300px;
+		height: 325px;
+	}
+	.timeline-data p {
+		font-size: 0.9em;
+	}
+	.timeline-data ul {
+		font-size: 0.9em;
+	}
+	.timeline-data li {
+		margin-bottom: 7px;
+	}
+	article p {
+		margin-bottom: 7px;
+		font-size: 1em;
+	}
+	aside figcaption {
+		margin-top: 5px;
+		margin-bottom: 7px;
+		font-size: 0.85em;
+		font-weight: 700;
+	}
+	.timeline-data h4 {
+		font-size: 1em;
+	}
+	article h3, .title {
+	font-size: 1.5em;
 	}
 }

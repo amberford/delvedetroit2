@@ -8,7 +8,7 @@ app.controller('mapCtrl', function($scope) {
     drawMarkers(oldLocs);
     overlay1890.show();
     overlay1920.hide();
-  };
+  }; 
 
   $scope.get1920Map = function() {
     removeMarkers();
@@ -34,22 +34,24 @@ app.controller('mapCtrl', function($scope) {
     overlay1920.hide();
   };
 
-  $scope.updateContent = function() {
-      console.log('test');
-      infowindow.setContent('<input type="text" placeholder="Write your content here"/>');
+  $scope.museumMap = function() {
+    removeMarkers();
+    initMarkers(museumLocs);
+    drawMarkers(museumLocs);
+    overlay1890.hide();
+    overlay1920.hide();
   };
 
   var oldLocs = [
-    ['1896- On June 4th, Henry Ford drives his first automobile through the streets of Detroit.', 42.338041, -83.051588, 17],
-    ["1896- Central High School is built on the corner of Cass and Warren. Today, it is Wayne State University's Old Main building.", 42.355046, -83.067359, 18],
-    ["1896- The last horse-drawn carriage is replaced by electric trolleys.", 42.347054, -83.055765, 19],
+    ['The Detroit Dry Dock Company was here. The company employed 600 people and built more ships than any other company in America in the 1890s.', 42.333359, -83.027398, 17],
+    ["Detroit Stove Works was here. It was a major stove maker that had 1300-1400 employees in the 1890s. They produced 80,000 stoves annually and had more than 700 designs.", 42.346924, -83.003869, 18],
+    ["1897- Sebastian S. Kresge opened his first 5 and 10 cent store here. It eventually develops into present day Kmart", 42.333416, -83.048587, 19],
     ["1892- Four Detroit streets (Jefferson, Lafayette, Cass and Second) are paved with asphalt. The rest are cobblestone, cedar block or unpaved.", 42.331389, -83.038246, 20],
-    ["1893- Detroiter Marie Owen beomes the first policewoman in the United States.", 42.346292, -83.078598, 21],
+    ["1896- Charles Brady King drives Detroit’s first gasoline powered car down Woodward Avenue", 42.335909, -83.050503, 21],
     ["1899- William Metzger and Seneca Lewis organize Detroit's first auto show. They showed 4 cars; 2 electric and 2 steam powered.", 42.338560, -83.028546, 22], 
-    ["1895- The Detroit Public Schools establish Kindergartens.", 42.333921, -83.054699, 23],
-    ["1895- Detroit begins to supply power for streetlights and public buildings.", 42.335646, -83.041582, 24],
-    ["1890- Detroit's population is 205,876; the 15th largest city in America.", 42.336657, -83.046571, 25],
-  ];
+    ["1899- Ransom E. Olds opens Detroit's first automobile manufacturing plant here.", 42.339602, -83.019011, 23],
+    ["The Michigan Stove Company was here. It was a major stove maker that had 1200 employees. They produced 76,000 stoves annually and had over 200 designs.", 42.344329, -83.013808, 24]
+    ];
 
   var twentiesLocs = [  
     ['1921- The Detroit Public Library was built at 5201 Woodward Avenue.', 42.358385, -83.066724, 9],
@@ -64,15 +66,14 @@ app.controller('mapCtrl', function($scope) {
   ];
 
   var sixtiesLocs = [
-    ['1960- Berry Gordy incorporated Tamla Records as Motown Record Company on April 14th. Motown achieved spectacular success for a small record company: 79 records in the Top Ten of the Billboard Hot 100 record chart between 1960 and 1969. ', 42.364170, -83.088545, 1],
-    ['1960- Detroit had the highest per capita income in the United States.', 42.3314, -83.0458, 2],
-    ['1963- Martin Luther King delivered his I Have a Dream speech for the first time at Cobo Hall, during the Walk to Freedom march. This civil rights march drew crowds of an estimated 125,000 and was the largest civil rights demonstration in U.S. history up to that date.', 42.332085, -83.049964, 3],
-    ['1964- Dr. Charles Wright opens the International Afro-American Museum in his office on West Grand Boulevard.', 42.345018, -83.107840, 4],
-    ['1965- On March 6th, My Girl by The Temptations became the #1 song on the Billboard Hot 100 charts.', 42.364080, -83.088387, 5],
+    ['1961- Eleven year old Stevie Wonder signs with Motown', 42.364448, -83.087490, 2],
+    ['1963- Dr. King delivered the I Have a Dream speech for the first time at Cobo Hall.', 42.332085, -83.049964, 3],
+    ['1964- Dr. Charles Wright opens the International Afro-American Museum in his office on West Grand Boulevard.', 42.357764, -83.106319, 4],
+    ['1964- On September 6th, The Beatles performed in Detroit for the first time at the Olympia Stadium.', 42.353641, -83.101121, 5],
     ["1965- The Charles H. Wright Museum of African American History is founded. It holds the world's largest permanent exhibit on African American culture.", 42.359083, -83.061005, 26],
     ['1968- The Detroit Tigers win the World Series against the St. Louis Cardinals.', 42.331944, -83.068889, 6],
-    ['1969- In January, I Heard it Through the Grapevine by Marvin Gaye becomes the #1 song on the Billboard Hot 100 charts.', 42.363989, -83.088298, 7],
-    ['1967- The 12th Street Riot lasted from July 23rd - July 27th. To help end the disturbance, Governor George W. Romney ordered the Michigan Army National Guard into Detroit, and President Lyndon B. Johnson sent in both the 82nd and 101st Airborne Divisions. The result was 43 dead, 1,189 injured, over 7,200 arrests, and more than 2,000 buildings destroyed.', 42.376389, -83.099444, 8]
+    ['1969- In January, I Heard it Through the Grapevine by Marvin Gaye becomes the #1 song on the Billboard Hot 100 charts.', 42.363930, -83.088793, 7],
+    ['1967- The 12th Street Riot lasted from July 23rd - July 27th. The result was 43 dead, 1,189 injured, over 7,200 arrests, and more than 2,000 buildings destroyed. To help end the disturbance, Governor George W. Romney ordered the Michigan Army National Guard into Detroit, and President Lyndon B. Johnson sent in both the 82nd and 101st Airborne Divisions.', 42.376389, -83.099444, 8]
   ];
 
   var newLocs = [
@@ -86,6 +87,12 @@ app.controller('mapCtrl', function($scope) {
     ['1999- The Motor City Casino Hotel opened on December 14th. The $825 million complex incorporates a historic building that once housed the Wagner Baking Company, makers of Wonder Bread. The building includes a 100,000 square-foot casino with approximately 3,000 slot machines, a 13,000-square-foot spa, a live music theater and a luxury hotel. It was purchased by Marian Ilitch of IH Gaming (Detroit Entertainment, LLC and owner of Little Ceasars).', 42.3390,-83.0690, 35],
     ['2007 - The Greektown Casino Hotel opened November 15th with a 13-story, 3,500-space parking garage.', 42.3345, -83.0412, 36],
     ["2013- Rock Gaming, the company of Quicken Loans founder Dan Gilbert, agreed to buy a majority stake in Greektown; as part of Gilbert's plan to help revitalize downtown Detroit.", 42.335091, -83.041370, 37]
+  ];
+
+  var museumLocs = [
+    ["Detroit Historical Museum", 42.359816, -83.066852, 38],
+    ['Detroit Institute of Arts', 42.359220, -83.064483, 39],
+    ["Motown Museum", 42.364072,-83.088293, 40]
   ];
 
   var map;
