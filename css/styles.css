@@ -22,6 +22,14 @@ header {
 	margin-top: 40px;
 	margin-bottom: 10px;
 }
+header h1 a {
+	margin: 0 auto;
+	width: 250px;
+	height: 40px;
+	background: url('/img/logo.png') no-repeat;
+	display: block;
+	text-indent: -9999px;
+}
 nav h1 {
 	font-family: "Dosis", sans-serif;
 	font-size: 2em;
@@ -254,6 +262,9 @@ aside h4 {
 .chartreuse {
 	color: #d1d96a;
 }
+.deeppink{
+	color: #EE1289;
+}
 .bg-orange {
 	background-color: #f28d3f;
 }
@@ -265,6 +276,10 @@ aside h4 {
 }
 .bg-chartreuse {
 	background-color: #d1d96a;
+}
+
+a:link{
+	color: #EE1289;
 }
 /* FOOTER
 ================================================*/
