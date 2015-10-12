@@ -10,6 +10,14 @@ app.controller('mapCtrl', function($scope) {
     
   }; 
 
+   $scope.twentiesMap = function() {
+    removeMarkers();
+    initMarkers(twentiesLocs);
+    drawMarkers(twentiesLocs);
+    overlay.hide();
+    
+  }; 
+
   $scope.sixtiesMap = function() {
     removeMarkers();
     initMarkers(sixtiesLocs);

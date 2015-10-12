@@ -15,6 +15,7 @@
 	<script src="js/mainCtrl.js"></script>
 	<script src="js/museumCtrl.js"></script>
 	<script src="js/1890Ctrl.js"></script>
+	<script src="js/1920Ctrl.js"></script>
 	<script src="js/1960Ctrl.js"></script>
 </head>
 <body ng-controller="mapCtrl">
@@ -32,8 +33,8 @@
 	</nav>
 	<div id="timeline">
 		<a href="#/1890" ng-click="oldMap()"><div class="date year1890">1890</div></a>
-<!-- 		<a href="#/1920"><div class="date year1920">1920</div></a>
- -->	<a href="#/1960" ng-click="sixtiesMap()"><div class="date year1960">1960</div></a>
+		<a href="#/1920" ng-click="twentiesMap()"><div class="date year1920">1920</div></a>
+		<a href="#/1960" ng-click="sixtiesMap()"><div class="date year1960">1960</div></a>
 		<a href="#/" ng-click="newMap()"><div class="date year2015">2015</div></a>
 	</div>
 	<main>
