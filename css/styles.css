@@ -110,14 +110,14 @@ main {
 }
 .year1920 {
 	border: 4px solid #4b8a79;
-	left: 25%;
+	left: 24%;
 }
 .year1920:hover {
 	background-color: #4b8a79 !important;
 }
 .year1960 {
 	border: 4px solid #8c1e1d;
-	left: 60%;
+	left: 56%;
 }
 .year1960:hover {
 	background-color: #8c1e1d !important;
@@ -277,7 +277,12 @@ aside h4 {
 .bg-chartreuse {
 	background-color: #d1d96a;
 }
-
+.show {
+	display: inline-block;
+}
+.hide {
+	display: none;
+}
 a:link{
 	color: #EE1289;
 }
