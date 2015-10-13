@@ -26,6 +26,11 @@ app.config(function($routeProvider) {
 		controller: 'museumCtrl',
 		templateUrl: 'partials/museum-view.html'
 	});
+	$routeProvider.when('/gallery',
+	{
+		controller: 'galleryCtrl',
+		templateUrl: 'partials/gallery-view.html'
+	});
 	$routeProvider.when('/about',
 	{
 		controller: 'aboutCtrl',
