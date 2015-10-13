@@ -1,13 +1,13 @@
 jQuery(document).ready(function(){
 	var $ = jQuery;
 	$('#deeper').click(function(){
-		$('#map-content').fadeOut('fast', function(){});
+		$('#map-content').slideUp('slow');
 	})
 	$('#about').click(function(){
-		$('#map-content').fadeOut('fast', function(){});
+		$('#map-content').slideUp('slow');
 	})
 	$('#home').click(function(){
-		$('#map-content').fadeIn('fast', function(){});
+		$('#map-content').slideDown('slow');
 		$('#summary-2015').css('display', 'inline-block');
 		$('#summary-1920').css('display', 'none');
 		$('#summary-1960').css('display', 'none');
@@ -18,7 +18,7 @@ jQuery(document).ready(function(){
 		$('.year1890').css('background-color', '#fff');
 	})
 	$('.year2015').click(function(){
-		$('#map-content').fadeIn('fast', function(){});
+		$('#map-content').slideDown('slow');
 		$('#summary-2015').css('display', 'inline-block');
 		$('#summary-1920').css('display', 'none');
 		$('#summary-1960').css('display', 'none');
@@ -29,7 +29,7 @@ jQuery(document).ready(function(){
 		$('.year1890').css('background-color', '#fff');
 	})
 	$('.year1960').click(function(){
-		$('#map-content').fadeIn('fast', function(){});
+		$('#map-content').slideDown('slow');
 		$('#summary-2015').css('display', 'none');
 		$('#summary-1960').css('display', 'inline-block');
 		$('#summary-1920').css('display', 'none');
@@ -40,7 +40,7 @@ jQuery(document).ready(function(){
 		$('.year1890').css('background-color', '#fff');
 	})
 	$('.year1920').click(function(){
-		$('#map-content').fadeIn('fast', function(){});
+		$('#map-content').slideDown('slow');
 		$('#summary-2015').css('display', 'none');
 		$('#summary-1960').css('display', 'none');
 		$('#summary-1920').css('display', 'inline-block');
@@ -51,7 +51,7 @@ jQuery(document).ready(function(){
 		$('.year1890').css('background-color', '#fff');
 	})
 	$('.year1890').click(function(){
-		$('#map-content').fadeIn('fast', function(){});
+		$('#map-content').slideDown('slow');
 		$('#summary-2015').css('display', 'none');
 		$('#summary-1960').css('display', 'none');
 		$('#summary-1920').css('display', 'none');
