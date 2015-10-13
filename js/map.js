@@ -2,6 +2,17 @@ var app = angular.module('delveApp');
 
 app.controller('mapCtrl', function($scope) { 
 
+  // var request = gapi.client.plus.people.get({
+  //   'userId' : 'me'
+  // });
+
+  // request.execute(function(resp) {
+  //   console.log('ID: ' + resp.id);
+  //   console.log('Display Name: ' + resp.displayName);
+  //   console.log('Image URL: ' + resp.image.url);
+  //   console.log('Profile URL: ' + resp.url);
+  // });
+
   $scope.get1890Map = function() {
     removeMarkers();
     initMarkers(oldLocs);
@@ -96,6 +107,7 @@ app.controller('mapCtrl', function($scope) {
   ];
 
   var map;
+  var currentMap;
   var infowindow;
   var markers = [];
   var overlay1890;
