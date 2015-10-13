@@ -97,7 +97,9 @@ app.controller('mapCtrl', function($scope) {
     ['2007-  The permanent MGM Grand Casino Resort opened its doors to the public on October 3rd. MGM is one of the top employers in the area, with approximately 3,000 team members. The casino includes 100,000 square feet of gaming space, over 4,000 slot machines, upscale restaurants and more.', 42.333229, -83.061063, 34],
     ['1999- The Motor City Casino Hotel opened on December 14th. The $825 million complex incorporates a historic building that once housed the Wagner Baking Company, makers of Wonder Bread. The building includes a 100,000 square-foot casino with approximately 3,000 slot machines, a 13,000-square-foot spa, a live music theater and a luxury hotel. It was purchased by Marian Ilitch of IH Gaming (Detroit Entertainment, LLC and owner of Little Ceasars).', 42.3390,-83.0690, 35],
     ['2007 - The Greektown Casino Hotel opened November 15th with a 13-story, 3,500-space parking garage.', 42.3345, -83.0412, 36],
-    ["2013- Rock Gaming, the company of Quicken Loans founder Dan Gilbert, agreed to buy a majority stake in Greektown; as part of Gilbert's plan to help revitalize downtown Detroit.", 42.335091, -83.041370, 37]
+    ["2013- Rock Gaming, the company of Quicken Loans founder Dan Gilbert, agreed to buy a majority stake in Greektown; as part of Gilbert's plan to help revitalize downtown Detroit.", 42.335091, -83.041370, 37],
+    ["2004- In 2004, General Motors completed a US$500 million renovation of the Rennesance Center its world headquarters. The renovation included the addition of the five-story Wintergarden atrium, Renaissance Center totals 5,552,000 square feet making it one of the world's largest commercial complexes and boasts one of the worlds tallest hotels.", 42.3289, -83.0397, 38]
+
   ];
 
   var museumLocs = [
