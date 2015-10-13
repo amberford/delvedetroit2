@@ -1,7 +1,7 @@
 var app = angular.module('delveApp');
 
-app.controller('1960Ctrl', function() {
-	Cookies.set('page', '1960');
+app.controller('aboutCtrl', function() {
+	Cookies.set('page', 'about');
 	var cookieYear = Cookies.get('page');
 	if (cookieYear === '1890') {
 		$jq('#summary-2015').css('display', 'none');

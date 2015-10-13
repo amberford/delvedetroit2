@@ -2,8 +2,8 @@ var app = angular.module('delveApp');
 
 var $jq = jQuery.noConflict();
 app.controller('1890Ctrl', function() {
-	Cookies.set('year', '1890');
-	var cookieYear = Cookies.get('year');
+	Cookies.set('page', '1890');
+	var cookieYear = Cookies.get('page');
 	if (cookieYear === '1890') {
 		$jq('#summary-2015').css('display', 'none');
 		$jq('#summary-1960').css('display', 'none');
@@ -32,7 +32,7 @@ app.controller('1890Ctrl', function() {
 		$jq('.year1960').css('background-color', '#8c1e1d');
 		$jq('.year1920').css('background-color', '#fff');
 		$jq('.year1890').css('background-color', '#fff');
-	} else {
+	} else if (cookieYear === '2015') {
 		$jq('#summary-2015').css('display', 'inline-block');
 		$jq('#summary-1920').css('display', 'none');
 		$jq('#summary-1960').css('display', 'none');
@@ -41,6 +41,8 @@ app.controller('1890Ctrl', function() {
 		$jq('.year1960').css('background-color', '#fff');
 		$jq('.year1920').css('background-color', '#fff');
 		$jq('.year1890').css('background-color', '#fff');
+	} else {
+		$jq('#map-content').slideUp('slow');
 	}
-	Cookies.remove('year');
+	Cookies.remove('page');
 });
