@@ -277,7 +277,12 @@ aside h4 {
 .bg-chartreuse {
 	background-color: #d1d96a;
 }
-
+.show {
+	display: inline-block;
+}
+.hide {
+	display: none;
+}
 a:link{
 	color: #EE1289;
 }
