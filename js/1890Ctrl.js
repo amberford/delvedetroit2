@@ -1,32 +1,46 @@
 var app = angular.module('delveApp');
 
+var $jq = jQuery.noConflict();
 app.controller('1890Ctrl', function() {
 	Cookies.set('year', '1890');
 	var cookieYear = Cookies.get('year');
 	if (cookieYear === '1890') {
-		console.log('1890 it works!');
+		$jq('#summary-2015').css('display', 'none');
+		$jq('#summary-1960').css('display', 'none');
+		$jq('#summary-1920').css('display', 'none');
+		$jq('#summary-1890').css('display', 'inline-block');
+		$jq('.year2015').css('background-color', '#fff');
+		$jq('.year1960').css('background-color', '#fff');
+		$jq('.year1920').css('background-color', '#fff');
+		$jq('.year1890').css('background-color', '#f28d3f');
 	} else if (cookieYear === '1920'){
-		console.log('1920 code works!');
+		$jq('#summary-2015').css('display', 'none');
+		$jq('#summary-1960').css('display', 'none');
+		$jq('#summary-1920').css('display', 'inline-block');
+		$jq('#summary-1890').css('display', 'none');
+		$jq('.year2015').css('background-color', '#fff');
+		$jq('.year1960').css('background-color', '#fff');
+		$jq('.year1920').css('background-color', '#4b8a79');
+		$jq('.year1890').css('background-color', '#fff');
 	} else if (cookieYear === '1960'){
-		console.log('1960 works!');
+		$jq('#map-content').slideDown('slow');
+		$jq('#summary-2015').css('display', 'none');
+		$jq('#summary-1960').css('display', 'inline-block');
+		$jq('#summary-1920').css('display', 'none');
+		$jq('#summary-1890').css('display', 'none');
+		$jq('.year2015').css('background-color', '#fff');
+		$jq('.year1960').css('background-color', '#8c1e1d');
+		$jq('.year1920').css('background-color', '#fff');
+		$jq('.year1890').css('background-color', '#fff');
 	} else {
-		console.log('2015 stuffs');
+		$jq('#summary-2015').css('display', 'inline-block');
+		$jq('#summary-1920').css('display', 'none');
+		$jq('#summary-1960').css('display', 'none');
+		$jq('#summary-1890').css('display', 'none');
+		$jq('.year2015').css('background-color', '#d1d96a');
+		$jq('.year1960').css('background-color', '#fff');
+		$jq('.year1920').css('background-color', '#fff');
+		$jq('.year1890').css('background-color', '#fff');
 	}
 	Cookies.remove('year');
-});
-
-app.directive('noRefresh', function() {
-    return {
-        restrict: 'A',
-        link: function(scope, element, attrs) {
-            $('#summary-2015').css('display', 'none');
-			$('#summary-1960').css('display', 'none');
-			$('#summary-1920').css('display', 'none');
-			$('#summary-1890').css('display', 'inline-block');
-			$('.year2015').css('background-color', '#fff');
-			$('.year1960').css('background-color', '#fff');
-			$('.year1920').css('background-color', '#fff');
-			$('.year1890').css('background-color', '#f28d3f');
-        }
-    };
 });
