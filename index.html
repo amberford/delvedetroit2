@@ -2,19 +2,20 @@
 <html ng-app='delveApp'>
 <head>
 	<title>Delve Detroit</title>
+	<link href='css/tiltedpage-scroll.css' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
 	<script src="https://code.angularjs.org/1.4.7/angular-route.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.1/angular-animate.min.js"></script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-mU4wjJAGmgLzSu-mn2IweeC-ediFn9E&signed_in=true"></script>
-	<script src="https://apis.google.com/js/platform.js" async defer></script>
-	<script type="text/javascript"></script>
-	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="https://apis.google.com/js/platform.js"></script>
 	<script src="js/timeline.js"></script>
 	<script src="js/app.js"></script>
 	<script src="js/map.js"></script>
 	<script src="js/mainCtrl.js"></script>
+	<script src="js/galleryCtrl.js"></script>
 	<script src="js/aboutCtrl.js"></script>
 	<script src="js/museumCtrl.js"></script>
 	<script src="js/1890Ctrl.js"></script>
@@ -31,6 +32,7 @@
 			</header>
 			<ul>
 				<a href="#/"><li id="home">Home</li></a>
+				<a href="#/gallery"><li id="about">Then vs. Now</li></a>
 				<a href="#/museum" ng-click="museumMap()"><li id="deeper">Delve Deeper</li></a>
 				<a href="#/about"><li id="about">About</li></a>
 			</ul>
@@ -57,7 +59,7 @@
 			</ul>
 		</section>
 		<section id="summary-1960" class="timeline-data">
-			<h1>Civil Rights Era</h1>
+			<h1>The Civil Rights Era</h1>
 			<h4 class="burgundy">1960-1970</h4>
 			<p>Detroit played a major role in the Civil Rights Movement of the 1960s. Dr. Martin Luther King, Jr. delivered his I Have a Dream speech for the first time at Cobo Hall, during the Walk to Freedom march.The march drew crowds of an estimated 125,000 and was the largest civil rights demonstration in U.S. history at the time. </p>
 			<ul>
