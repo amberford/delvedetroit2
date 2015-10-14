@@ -388,3 +388,17 @@ padding:2px;
 border: solid black;
 margin: 10px;
 }
+
+/*about-view*/
+
+.about{
+	text-align: center;
+	font-size: 1.2em;
+	margin-left: 20%;
+	margin-right: 20%;
+
+}
+
+.about p{
+	padding-top: 10px;
+}
