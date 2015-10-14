@@ -14,6 +14,8 @@ app.controller('mapCtrl', function($scope) {
   // });
 
   $scope.get1890Map = function() {
+    map.center_ = {lat: 42.356813, lng: -83.062773};
+    map.setZoom(14);
     removeMarkers();
     initMarkers(oldLocs);
     drawMarkers(oldLocs);
@@ -23,6 +25,8 @@ app.controller('mapCtrl', function($scope) {
   }; 
 
   $scope.get1920Map = function() {
+    map.center_ = {lat: 42.436813, lng: -83.042773};
+    map.setZoom(12);
     removeMarkers();
     initMarkers(twentiesLocs);
     drawMarkers(twentiesLocs);
@@ -32,6 +36,8 @@ app.controller('mapCtrl', function($scope) {
   };
 
   $scope.get1960Map = function() {
+    map.center_ = {lat: 42.436813, lng: -83.042773};
+    map.setZoom(12);
     removeMarkers();
     initMarkers(sixtiesLocs);
     drawMarkers(sixtiesLocs);
@@ -41,6 +47,8 @@ app.controller('mapCtrl', function($scope) {
   };
 
   $scope.get2015Map = function() {
+    map.center_ = detroit;
+    map.setZoom(14);
     removeMarkers();
     initMarkers(newLocs);
     drawMarkers(newLocs);
@@ -55,6 +63,7 @@ app.controller('mapCtrl', function($scope) {
     drawMarkers(museumLocs);
     overlay1890.hide();
     overlay1920.hide();
+    overlay1960.hide();
   };
 
   var oldLocs = [
@@ -278,6 +287,7 @@ app.controller('mapCtrl', function($scope) {
       panes.overlayLayer.appendChild(div);
       overlay1890.hide();
       overlay1920.hide();
+      overlay1960.hide();
     };
 
     USGSOverlay.prototype.draw = function() {
