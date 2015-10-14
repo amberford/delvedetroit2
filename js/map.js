@@ -2,12 +2,24 @@ var app = angular.module('delveApp');
 
 app.controller('mapCtrl', function($scope) { 
 
+  // var request = gapi.client.plus.people.get({
+  //   'userId' : 'me'
+  // });
+
+  // request.execute(function(resp) {
+  //   console.log('ID: ' + resp.id);
+  //   console.log('Display Name: ' + resp.displayName);
+  //   console.log('Image URL: ' + resp.image.url);
+  //   console.log('Profile URL: ' + resp.url);
+  // });
+
   $scope.get1890Map = function() {
     removeMarkers();
     initMarkers(oldLocs);
     drawMarkers(oldLocs);
     overlay1890.show();
     overlay1920.hide();
+    overlay1960.hide();
   }; 
 
   $scope.get1920Map = function() {
@@ -15,7 +27,8 @@ app.controller('mapCtrl', function($scope) {
     initMarkers(twentiesLocs);
     drawMarkers(twentiesLocs);
     overlay1890.hide();
-    overlay1920.show();    
+    overlay1920.show();
+    overlay1960.hide();    
   };
 
   $scope.get1960Map = function() {
@@ -23,7 +36,8 @@ app.controller('mapCtrl', function($scope) {
     initMarkers(sixtiesLocs);
     drawMarkers(sixtiesLocs);
     overlay1890.hide();
-    overlay1920.hide();    
+    overlay1920.hide();
+    overlay1960.show();    
   };
 
   $scope.get2015Map = function() {
@@ -32,6 +46,7 @@ app.controller('mapCtrl', function($scope) {
     drawMarkers(newLocs);
     overlay1890.hide();
     overlay1920.hide();
+    overlay1960.hide();
   };
 
   $scope.museumMap = function() {
@@ -102,6 +117,7 @@ app.controller('mapCtrl', function($scope) {
   var markers = [];
   var overlay1890;
   var overlay1920;
+  var overlay1960;
   USGSOverlay.prototype = new google.maps.OverlayView();
 
 
@@ -123,18 +139,23 @@ app.controller('mapCtrl', function($scope) {
         new google.maps.LatLng(42.257302, -83.476492),
         new google.maps.LatLng(42.447800, -83.099120));
 
-      //nw: 42.450185, -83.098850  -83.098580 -82.910401 -83.286498
+      var bounds1960 = new google.maps.LatLngBounds(
+        new google.maps.LatLng(42.259802, -83.476492),
+        new google.maps.LatLng(42.450300, -83.099120));
 
       var src1890Map = 'img/maps/map1897cropped2.png';
       var src1920Map = 'img/maps/map1950.png';
+      var src1960Map = 'img/maps/map1970.png';
 
       overlay1890 = new USGSOverlay(bounds1890, src1890Map, map);
       overlay1920 = new USGSOverlay(bounds1920, src1920Map, map);
+      overlay1960 = new USGSOverlay(bounds1960, src1960Map, map);
 
       infowindow = new google.maps.InfoWindow;
 
       var marker, i;
 
+      //creates an editable marker where the map is clicked
       map.addListener('click', function(event) {
         addMarker(event.latLng);
       });
@@ -173,6 +194,7 @@ app.controller('mapCtrl', function($scope) {
       }
     }
 
+    //This function creates editable markers
     function addMarker(coords) {
       marker = new google.maps.Marker({
           position: coords,
@@ -217,11 +239,6 @@ app.controller('mapCtrl', function($scope) {
         textBox.style.display = this.editing ? "block" : "none";
         htmlBox.style.display = this.editing ? "none" : "block";
       });
-
-      google.maps.event.addListener(marker, "editing_changed", function(){
-        textBox.style.display = this.editing ? "block" : "none";
-        htmlBox.style.display = this.editing ? "none" : "block";
-      });
       
       google.maps.event.addDomListener(textBox, "change", function(){
         htmlBox.innerHTML = textBox.value;
@@ -229,8 +246,7 @@ app.controller('mapCtrl', function($scope) {
       });
     }
 
-    
-
+    //This is the definition of the map overlay class
     function USGSOverlay(bounds, image, map) {
 
       this.bounds_ = bounds;
@@ -295,8 +311,7 @@ app.controller('mapCtrl', function($scope) {
       }
     };
 
-  
-    
+  //When the window loads, create the map
   google.maps.event.addDomListener(window, 'load', initMap);
 
 });

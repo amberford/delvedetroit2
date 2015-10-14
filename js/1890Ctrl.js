@@ -1,7 +1,14 @@
 var app = angular.module('delveApp');
 
 var $jq = jQuery.noConflict();
-app.controller('1890Ctrl', function() {
+app.controller('1890Ctrl', function($scope, factService) {
+
+	$scope.fact = '';
+
+	$scope.getFact = function() {
+		$scope.fact = factService.getFact(1890);
+	}
+
 	Cookies.set('page', '1890');
 	var cookieYear = Cookies.get('page');
 	if (cookieYear === '1890') {

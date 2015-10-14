@@ -73,3 +73,15 @@
   opacity:0;
 }
 
+
+#gallery h1 {
+  text-align: center;
+}
+
+#gallery h3{
+  margin-top: 15px;
+  text-align: center;
+  text-shadow: 2px 2px white;
+  padding: 10px;
+  position: relative;
+}
