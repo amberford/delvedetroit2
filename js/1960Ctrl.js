@@ -41,7 +41,9 @@ app.controller('1960Ctrl', function($scope, factService) {
 		$jq('.year1920').css('background-color', '#fff');
 		$jq('.year1890').css('background-color', '#fff');
 	} else if (cookieYear === '2015') {
-		$jq('#map-content').slideDown('fast');
+		$jq('#hide-all').fadeIn(500);
+		$jq('#map-content').delay(500).slideDown(500);
+		$jq('#timeline').slideDown(500);
 		$jq('#summary-2015').css('display', 'inline-block');
 		$jq('#summary-1920').css('display', 'none');
 		$jq('#summary-1960').css('display', 'none');
@@ -51,7 +53,9 @@ app.controller('1960Ctrl', function($scope, factService) {
 		$jq('.year1920').css('background-color', '#fff');
 		$jq('.year1890').css('background-color', '#fff');
 	} else {
-		$jq('#map-content').slideUp('slow');
+		$jq('#hide-all').fadeOut(500);
+		$jq('#timeline').delay(500).slideUp(500);
+		$jq('#map-content').slideUp(500);
 		$jq('.year2015').css('background-color', '#fff');
 		$jq('.year1960').css('background-color', '#fff');
 		$jq('.year1920').css('background-color', '#fff');

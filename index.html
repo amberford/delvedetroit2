@@ -38,13 +38,12 @@
 			</ul>
 		</div>
 	</nav>
+	<div id="hide-all">
 	<div id="timeline">
-
 		<a href="#/1890" ng-click="get1890Map()"><div class="date year1890">1890</div></a>
 		<a href="#/1920" ng-click="get1920Map()"><div class="date year1920">1920</div></a>
 		<a href="#/1960" ng-click="get1960Map()"><div class="date year1960">1960</div></a>
 		<a href="#/" ng-click="get2015Map()"><div class="date year2015">2015</div></a>
-
 	</div>
 	<main id="map-content">
 		<section id="summary-2015" class="timeline-data">
@@ -91,6 +90,7 @@
 		</section>
 		<div id="map"></div>
 	</main>
+	</div>
 	<ng-view autoscroll="true"></ng-view>
 	<footer>
 		&copy; Delve Detroit 2015
