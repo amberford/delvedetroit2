@@ -246,7 +246,7 @@ aside h4 {
 	font-family: "Dosis", sans-serif;
 	letter-spacing: 1px;
 	text-transform: uppercase;
-	display: inline-block;
+	display: block;
 }
 .bold, #year {
 	font-weight: 700;
@@ -402,3 +402,55 @@ margin: 10px;
 .about p{
 	padding-top: 10px;
 }
+
+/*caption effect*/
+
+ .box {  
+  
+    cursor: pointer;  
+    height: 300px;  
+    float: left;  
+    margin: 5px;  
+    position: relative;  
+    overflow: hidden;  
+    width: 300px;  
+    padding: 5px;
+  
+}  
+  
+ .box img {  
+    position: absolute;  
+    left: 0;  
+    -webkit-transition: all 300ms ease-out;  
+    -moz-transition: all 300ms ease-out;  
+    -o-transition: all 300ms ease-out;  
+    -ms-transition: all 300ms ease-out;  
+    transition: all 300ms ease-out;  
+}  
+
+
+.box .caption {  
+    font-family: Tahoma;
+    font-size: 12px;
+    background-color: rgba(0,0,0,0.8);  
+    position: absolute;  
+    color: #fff;  
+    z-index: 100;  
+    -webkit-transition: all 300ms ease-out;  
+    -moz-transition: all 300ms ease-out;  
+    -o-transition: all 300ms ease-out;  
+    -ms-transition: all 300ms ease-out;  
+    transition: all 300ms ease-out;  
+    left: 0;  
+    opacity: 0;  
+    width: 100%;  
+    height: 100%;  
+    text-align: left;  
+    padding: 15px;
+}  
+
+ 
+
+ .box:hover .fade-caption {  
+    opacity: 1;  
+}  

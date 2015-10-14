@@ -46,7 +46,6 @@
 }
 
 #cf img {
-  padding: 10px;
   position:absolute;
   center:0;
   -webkit-transition: opacity 1s ease-in-out;
