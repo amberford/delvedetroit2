@@ -17,7 +17,9 @@ app.controller('1890Ctrl', function($scope, factService) {
 		$jq('#map-content').hide().fadeTo(500, 1);
 		$jq('#view-content').hide().delay(625).fadeTo(500, 1);
 
-		$jq('#summary-2015').('#summary-1960').('#summary-1920').css('display', 'none');
+		$jq('#summary-2015').css('display', 'none');
+		$jq('#summary-1960').css('display', 'none');
+		$jq('#summary-1920').css('display', 'none');
 		$jq('#summary-1890').css('display', 'inline-block');
 		$jq('.year2015').css('background-color', '#fff');
 		$jq('.year1960').css('background-color', '#fff');
