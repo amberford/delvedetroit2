@@ -5,7 +5,9 @@ app.controller('mainCtrl', function($scope, factService) {
 
 	$scope.fact = '';
 	$scope.getFact = function() {
-		$scope.fact = factService.getFact(2015);
+		factService.getFact(2015).then(function(response){
+			$scope.fact = response.data;
+		});
 	}
 
 	Cookies.set('page', '2015');
@@ -62,4 +64,6 @@ app.controller('mainCtrl', function($scope, factService) {
 		$jq('.year1890').css('background-color', '#fff');
 	}
 	Cookies.remove('page');
+
+	$scope.getFact();
 });

@@ -5,7 +5,10 @@ app.controller('1960Ctrl', function($scope, factService) {
 
 	$scope.fact = '';
 	$scope.getFact = function() {
-		$scope.fact = factService.getFact(1960);
+		factService.getFact(1960).then(function(response){
+			console.log(response.data);
+			$scope.fact = response.data;
+		});
 	}
 
 	Cookies.set('page', '1960');

@@ -5,9 +5,12 @@ app.controller('1890Ctrl', function($scope, factService) {
 
 	$scope.fact = '';
 	$scope.getFact = function() {
-		$scope.fact = factService.getFact(1890);
+		factService.getFact(1890).then(function(response){
+			$scope.fact = response.data;
+		});
 	}
-
+	$scope.getFact();
+	$scope.getFact();
 	Cookies.set('page', '1890');
 	var cookieYear = Cookies.get('page');
 	if (cookieYear === '1890') {
