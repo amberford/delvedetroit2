@@ -1,4 +1,4 @@
-jQuery(document).ready(function(){
+/*jQuery(document).ready(function(){
 	var $ = jQuery;
 	$('#deeper').click(function(){
 		$('#map-content').slideUp('slow');
@@ -61,4 +61,4 @@ jQuery(document).ready(function(){
 		$('.year1920').css('background-color', '#fff');
 		$('.year1890').css('background-color', '#f28d3f');
 	})
-})
+})*/
