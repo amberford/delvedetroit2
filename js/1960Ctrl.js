@@ -1,6 +1,13 @@
 var app = angular.module('delveApp');
 
-app.controller('1960Ctrl', function() {
+app.controller('1960Ctrl', function($scope, factService) {
+
+	$scope.fact = '';
+
+	$scope.getFact = function() {
+		$scope.fact = factService.getFact(1960);
+	}
+
 	Cookies.set('page', '1960');
 	var cookieYear = Cookies.get('page');
 	if (cookieYear === '1890') {

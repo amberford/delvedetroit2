@@ -1,20 +1,12 @@
 var app = angular.module('delveApp');
 
 var $jq = jQuery.noConflict();
-app.controller('1890Ctrl', function($scope, $http) {
+app.controller('1890Ctrl', function($scope, factService) {
 
 	$scope.fact = '';
 
 	$scope.getFact = function() {
-		$http({
-		  method: 'GET',
-		  url: 'https://whispering-wave-9659.herokuapp.com/'
-		})
-		.then(function successCallback(response) {
-		    $scope.fact = response.data;
-		  }, function errorCallback(response) {
-		    console.log('error?');
-		});
+		$scope.fact = factService.getFact(1890);
 	}
 
 	Cookies.set('page', '1890');
