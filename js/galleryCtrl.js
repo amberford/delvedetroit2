@@ -16,7 +16,7 @@ app.controller('galleryCtrl', function() {
 		$jq('#map-content').slideDown(600);
 		$jq('#timeline').slideDown(400);
 		$jq('#map-content').hide().fadeTo(500, 1);
-		$jq('#view-content').hide().delay(700).fadeTo(500, 1);
+		$jq('#view-content').hide().delay(625).fadeTo(500, 1);
 
 		$jq('#summary-2015').css('display', 'none');
 		$jq('#summary-1960').css('display', 'none');
@@ -31,7 +31,7 @@ app.controller('galleryCtrl', function() {
 		$jq('#map-content').slideDown(600);
 		$jq('#timeline').slideDown(400);
 		$jq('#map-content').hide().fadeTo(500, 1);
-		$jq('#view-content').hide().delay(700).fadeTo(500, 1);
+		$jq('#view-content').hide().delay(625).fadeTo(500, 1);
 
 		$jq('#summary-2015').css('display', 'none');
 		$jq('#summary-1960').css('display', 'none');
@@ -46,7 +46,7 @@ app.controller('galleryCtrl', function() {
 		$jq('#map-content').slideDown(600);
 		$jq('#timeline').slideDown(400);
 		$jq('#map-content').hide().fadeTo(500, 1);
-		$jq('#view-content').hide().delay(700).fadeTo(500, 1);
+		$jq('#view-content').hide().delay(625).fadeTo(500, 1);
 
 		$jq('#summary-2015').css('display', 'none');
 		$jq('#summary-1960').css('display', 'inline-block');
@@ -61,7 +61,7 @@ app.controller('galleryCtrl', function() {
 		$jq('#map-content').slideDown(600);
 		$jq('#timeline').slideDown(400);
 		$jq('#map-content').hide().fadeTo(500, 1);
-		$jq('#view-content').hide().delay(700).fadeTo(500, 1);
+		$jq('#view-content').hide().delay(625).fadeTo(500, 1);
 
 		$jq('#summary-2015').css('display', 'inline-block');
 		$jq('#summary-1920').css('display', 'none');
@@ -75,6 +75,7 @@ app.controller('galleryCtrl', function() {
 		$jq('#hide-all').fadeTo(500, 0);
 		$jq('#timeline').delay(500).slideUp(500);
 		$jq('#map-content').slideUp(500);
+		$jq('#view-content').hide().delay(200).fadeTo(200, 1);
 		
 		$jq('.year2015').css('background-color', '#fff');
 		$jq('.year1960').css('background-color', '#fff');
