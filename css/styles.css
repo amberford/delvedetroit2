@@ -368,9 +368,23 @@ a {
 	color: #EE1289;
 }
 
-/*.museum {
-	text-align: center;
-}*/
+.museum{
+  margin-top: 15px;
+  text-align: center;
+  text-shadow: 2px 2px white;
+  padding: 10px;
+  position: relative;
+}
 
-/*About view*/
-
+#link a {
+text-align: center;
+padding: 5px;
+padding-top: 15px;
+display: block;
+clear: both;
+}
+.bborder{
+padding:2px;
+border: solid black;
+margin: 10px;
+}
