@@ -283,9 +283,7 @@ aside h4 {
 .hide {
 	display: none;
 }
-a:link{
-	color: #EE1289;
-}
+
 /* FOOTER
 ================================================*/
 footer {
@@ -362,3 +360,16 @@ footer {
 	font-size: 1.5em;
 	}
 }
+
+/*Museum-view*/
+
+a {
+	color: #EE1289;
+}
+
+/*.museum {
+	text-align: center;
+}*/
+
+/*About view*/
+

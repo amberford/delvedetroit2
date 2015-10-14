@@ -32,9 +32,6 @@
 
 }
 
-h1{
-text-align: center;
-}
 #cf {
   position:relative;
   height:500px;
@@ -76,7 +73,7 @@ text-align: center;
   opacity:0;
 }
 
-h3{
+.museum{
   margin-top: 15px;
   text-align: center;
   text-shadow: 2px 2px white;
