@@ -16,7 +16,7 @@ html {
 body {
 	font-family: "Lato", "Helvetica", "Calibri", sans-serif;
 	overflow-x: hidden;
-	margin-top: 120px;
+	margin-top: 135px;
 }
 
 /* NAVIGATION
@@ -44,7 +44,6 @@ nav li {
 	vertical-align: middle;
 	padding: 4px 20px;
 	font-weight: 700;
-	font-size: 1em;
 	text-transform: uppercase;
 }
 nav a {
@@ -401,6 +400,9 @@ footer {
 ================================================*/
 
 @media screen and (min-width: 1920px) {
+	nav li {
+		font-size: 1.2em;
+	}
 	#timeline {
 		font-size: 1em;
 	}
@@ -443,6 +445,9 @@ footer {
 }
 
 @media screen and (max-width: 1919px) {
+	nav li {
+		font-size: 1em;
+	}
 	#timeline {
 		font-size: 0.8em;
 	}
