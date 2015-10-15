@@ -10,6 +10,8 @@ app.controller('mainCtrl', function($scope, factService) {
 		});
 	}
 
+	$scope.getFact();
+
 	Cookies.set('page', '2015');
 	var cookieYear = Cookies.get('page');
 	if (cookieYear === '1890') {
@@ -84,6 +86,4 @@ app.controller('mainCtrl', function($scope, factService) {
 		$jq('.year1890').css('background-color', '#fff');
 	}
 	Cookies.remove('page');
-
-	$scope.getFact();
 });

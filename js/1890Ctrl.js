@@ -9,10 +9,11 @@ app.controller('1890Ctrl', function($scope, factService) {
 			$scope.fact = response.data;
 		});
 	}
+
 	$scope.getFact();
-	$scope.getFact();
+
 	Cookies.set('page', '1890');
-		var cookieYear = Cookies.get('page');
+	var cookieYear = Cookies.get('page');
 	if (cookieYear === '1890') {
 		$jq('#hide-all').fadeTo(500, 1);
 		$jq('#map-content').slideDown(600);

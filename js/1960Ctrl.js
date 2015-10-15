@@ -6,13 +6,14 @@ app.controller('1960Ctrl', function($scope, factService) {
 	$scope.fact = '';
 	$scope.getFact = function() {
 		factService.getFact(1960).then(function(response){
-			console.log(response.data);
 			$scope.fact = response.data;
 		});
 	}
 
+	$scope.getFact();
+
 	Cookies.set('page', '1960');
-		var cookieYear = Cookies.get('page');
+	var cookieYear = Cookies.get('page');
 	if (cookieYear === '1890') {
 		$jq('#hide-all').fadeTo(500, 1);
 		$jq('#map-content').slideDown(600);

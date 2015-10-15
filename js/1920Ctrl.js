@@ -10,8 +10,10 @@ app.controller('1920Ctrl', function($scope, factService) {
 		});
 	}
 
+	$scope.getFact();
+
 	Cookies.set('page', '1920');
-		var cookieYear = Cookies.get('page');
+	var cookieYear = Cookies.get('page');
 	if (cookieYear === '1890') {
 		$jq('#hide-all').fadeTo(500, 1);
 		$jq('#map-content').slideDown(600);
