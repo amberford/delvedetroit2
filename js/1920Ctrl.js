@@ -42,7 +42,7 @@ app.controller('1920Ctrl', function($scope, factService) {
 		$jq('#summary-1890').css('display', 'none');
 		$jq('.year2015').css('background-color', '#fff');
 		$jq('.year1960').css('background-color', '#fff');
-		$jq('.year1920').css('background-color', '#4b8a79');
+		$jq('.year1920').css('background-color', '#e5b600');
 		$jq('.year1890').css('background-color', '#fff');
 	} else if (cookieYear === '1960'){
 		$jq('#hide-all').fadeTo(500, 1);
