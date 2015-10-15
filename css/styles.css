@@ -115,7 +115,6 @@ main {
 	height: 4px;
 	width: 45%;
 	font-weight: 700;
-	font-size: 0.8em;
 	line-height: 5em;
 	background-color: #ccc;
 	text-align: center;
@@ -126,8 +125,6 @@ main {
 	color: #666;
 }
 .date {
-	width: 25px;
-	height: 25px;
 	border-radius: 50%;
 	background-color: #fff;
 	text-align: center;
@@ -405,6 +402,13 @@ footer {
 ================================================*/
 
 @media screen and (min-width: 1920px) {
+	#timeline {
+		font-size: 1em;
+	}
+	.date {
+		width: 40px;
+		height: 40px;
+	}
 	#map {
 		height: 450px;
 	}
@@ -439,6 +443,13 @@ footer {
 }
 
 @media screen and (max-width: 1919px) {
+	#timeline {
+		font-size: 0.8em;
+	}
+	.date {
+		width: 25px;
+		height: 25px;
+	}
 	#map {
 		height: 325px;
 	}
