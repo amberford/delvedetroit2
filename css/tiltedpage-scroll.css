@@ -83,7 +83,7 @@
   color: #960400;
   font-family: "Dosis", sans-serif;
   text-align: center;
-  text-shadow: 2px 2px white;
+  text-shadow: 2px 2px 2px white;
   padding: 10px;
   position: relative;
 }
