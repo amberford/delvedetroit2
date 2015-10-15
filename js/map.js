@@ -127,7 +127,7 @@ app.controller('mapCtrl', function($scope) {
   var overlay1890;
   var overlay1920;
   var overlay1960;
-  USGSOverlay.prototype = new google.maps.OverlayView();
+  MapOverlay.prototype = new google.maps.OverlayView();
 
 
   var detroit = {lat: 42.336813, lng: -83.042773};
@@ -156,9 +156,9 @@ app.controller('mapCtrl', function($scope) {
       var src1920Map = 'img/maps/map1950.png';
       var src1960Map = 'img/maps/map1970.png';
 
-      overlay1890 = new USGSOverlay(bounds1890, src1890Map, map);
-      overlay1920 = new USGSOverlay(bounds1920, src1920Map, map);
-      overlay1960 = new USGSOverlay(bounds1960, src1960Map, map);
+      overlay1890 = new MapOverlay(bounds1890, src1890Map, map);
+      overlay1920 = new MapOverlay(bounds1920, src1920Map, map);
+      overlay1960 = new MapOverlay(bounds1960, src1960Map, map);
 
       infowindow = new google.maps.InfoWindow;
 
@@ -214,12 +214,12 @@ app.controller('mapCtrl', function($scope) {
       marker.set("editing", false);
 
       var htmlBox = document.createElement("div");
-      htmlBox.innerHTML = "test";
+      htmlBox.innerHTML = "Write your info here";
       htmlBox.style.width = "300px";
       htmlBox.style.height = "100px";
 
       var textBox = document.createElement("textarea");
-      textBox.innerText = "test";
+      textBox.innerText = "Write your info here";
       textBox.style.width = "300px";
       textBox.style.height = "100px";
       textBox.style.display = "none";
@@ -256,7 +256,7 @@ app.controller('mapCtrl', function($scope) {
     }
 
     //This is the definition of the map overlay class
-    function USGSOverlay(bounds, image, map) {
+    function MapOverlay(bounds, image, map) {
 
       this.bounds_ = bounds;
       this.image_ = image;
@@ -267,7 +267,7 @@ app.controller('mapCtrl', function($scope) {
       this.setMap(map);
     }
 
-    USGSOverlay.prototype.onAdd = function() {
+    MapOverlay.prototype.onAdd = function() {
 
       var div = document.createElement('div');
       div.style.borderStyle = 'none';
@@ -290,7 +290,7 @@ app.controller('mapCtrl', function($scope) {
       overlay1960.hide();
     };
 
-    USGSOverlay.prototype.draw = function() {
+    MapOverlay.prototype.draw = function() {
 
       var overlayProjection = this.getProjection();
 
@@ -304,18 +304,18 @@ app.controller('mapCtrl', function($scope) {
       div.style.height = (sw.y - ne.y) + 'px';
     };
 
-    USGSOverlay.prototype.onRemove = function() {
+    MapOverlay.prototype.onRemove = function() {
       this.div_.parentNode.removeChild(this.div_);
       this.div_ = null;
     };
 
-    USGSOverlay.prototype.hide = function() {
+    MapOverlay.prototype.hide = function() {
       if (this.div_) {
         this.div_.style.visibility = 'hidden';
       }
     };
 
-    USGSOverlay.prototype.show = function() {
+    MapOverlay.prototype.show = function() {
       if (this.div_) {
         this.div_.style.visibility = 'visible';
       }
