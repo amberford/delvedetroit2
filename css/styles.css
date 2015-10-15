@@ -308,34 +308,44 @@ aside:hover .fade-caption {
 
 /* MUSEUM STYLES
 ================================================*/
-#museum-wrapper {
-	width: 65%;
+#sub-wrapper {
+	width: 60%;
 	margin: 0 auto;
 	text-align: center;
 }
-#museum-wrapper p {
-	margin: 5px 0 20px 0;
+#sub-wrapper p {
+	margin-top: 7px;
 }
-#museum-wrapper a {
+#sub-wrapper a {
 	text-decoration: none;
 	color: red;
-	display: block;
 }
-#museum-wrapper div {
+#sub-wrapper div {
+	margin: 20px 0;
 	padding: 10px;
 	width: 33%;
 	float: left;
 	display: block;
 }
-#museum-wrapper div img {
+#sub-wrapper div img {
 	width: 100%;
 }
-#museum-wrapper ul {
+#sub-wrapper ul {
 	clear: both;
 }
-#museum-wrapper li {
+#delve-info {
+	width: 75%;
+	margin: 0 auto;
+}
+#info {
+	padding-top: 20px;
+}
+#members {
+	padding-top: 20px; 
+}
+#sub-wrapper li {
 	display: block;
-	margin-bottom: 10px;
+	margin-bottom: 7px;
 }
 
 /* ATTRIBUTES
