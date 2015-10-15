@@ -46,7 +46,9 @@
 
   "2006 - In February the city hosted the Super Bowl XL.",
 
-  "2006 - In October the Detroit Tigers defeated the Oakland A's in the American League Championship Series. The victory came three years after having a 119-loss season."
+  "2006 - In October the Detroit Tigers defeated the Oakland A's in the American League Championship Series. The victory came three years after having a 119-loss season.",
+
+  "The Renaissance Center has its own zip code – 48243! 
 
   ]
 
