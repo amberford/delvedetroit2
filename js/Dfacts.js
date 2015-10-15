@@ -17,32 +17,32 @@
 
     ["The Detroit Historical Society was formed in 1921",
 
-     "WWJ went on air in August 1920 the radio station was originally called 8MK. Its first home was the Detroit News building. Both are still in operation.",
+     "Radio station WWJ went on air in August 1920, and it was originally called 8MK. Its first home was the Detroit News building. Both are still in operation.",
 
-     "On October 26, 1925, The Cleaners and Dryers war was started and cemented the power of the Purple Gang in Detroit.",
+     "On October 26, 1925 the Cleaners and Dryers war was started and cemented the power of the Purple Gang in Detroit.",
 
-     "1922 James Couzens,Former General Manager of Ford Motor Company, was appointed as a United States senator. Couzens used his investment earnings to found the Children’s Fund of Michigan to give all children in Michigan health and dental care."
+     "1922 James Couzens, former General Manager of Ford Motor Company, was appointed as a United States senator. Couzens used his investment earnings to start the Children’s Fund of Michigan; which gave all children in Michigan health and dental care."
 
      ]
 
      //1960s Facts
 
-     [ "1961 - The Temptations auditioned for Motown with the name The Elgins, but are signed as The Temptations.",
+     [ "1961 - The Temptations auditioned for Motown with the name The Elgins, but were signed as The Temptations.",
 
-     "Paradise Theatre, the jazz mecca of the 40s and 50s, has been renovated and is now home to the Detroit Symphony Orchestra.",
+     "Paradise Theatre, the jazz mecca of the 40s and 50s, was renovated and is now home to the Detroit Symphony Orchestra.",
 
       "1965 - Motown launched its foreign label, Tamla-Motown, in London, England.",
 
-      "1965 - The Supremes recorded 'Stop In the Name of Love', which held the number one position on the Billboard charts from March 27th to April 3rd."
+      'The Supremes recorded "Stop In the Name of Love", which held the number one position on the Billboard charts from March 27th to April 3rd, 1965.'
      ]
 
 
      //Present Facts
 
 [
-  "2002 - The Detroit Lions football team begin play in the new, state-of-the-art Ford Field, returning to downtown Detroit after 27 years in suburban Pontiac.",
+  "2002 - The Detroit Lions began playing in the new, state-of-the-art Ford Field stadium; returning to downtown Detroit after 27 years in Pontiac.",
 
-  "2005 - Comerica Park hosts Major League Baseball's All-Star Game.",
+  "2005 - Comerica Park hosted Major League Baseball's All-Star Game.",
 
   "2006 - In February the city hosted the Super Bowl XL.",
 
