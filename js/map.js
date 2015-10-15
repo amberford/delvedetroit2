@@ -204,56 +204,56 @@ app.controller('mapCtrl', function($scope) {
     }
 
     //This function creates editable markers
-    function addMarker(coords) {
-      marker = new google.maps.Marker({
-          position: coords,
-          animation: google.maps.Animation.DROP,
-          map: map
-      });
+    // function addMarker(coords) {
+    //   marker = new google.maps.Marker({
+    //       position: coords,
+    //       animation: google.maps.Animation.DROP,
+    //       map: map
+    //   });
 
-      marker.set("editing", false);
+    //   marker.set("editing", false);
 
-      var htmlBox = document.createElement("div");
-      htmlBox.innerHTML = "Write your info here";
-      htmlBox.style.width = "300px";
-      htmlBox.style.height = "100px";
+    //   var htmlBox = document.createElement("div");
+    //   htmlBox.innerHTML = "Write your info here";
+    //   htmlBox.style.width = "300px";
+    //   htmlBox.style.height = "100px";
 
-      var textBox = document.createElement("textarea");
-      textBox.innerText = "Write your info here";
-      textBox.style.width = "300px";
-      textBox.style.height = "100px";
-      textBox.style.display = "none";
+    //   var textBox = document.createElement("textarea");
+    //   textBox.innerText = "Write your info here";
+    //   textBox.style.width = "300px";
+    //   textBox.style.height = "100px";
+    //   textBox.style.display = "none";
 
-      var container = document.createElement("div");
-      container.style.position = "relative";
-      container.appendChild(htmlBox);
-      container.appendChild(textBox);
+    //   var container = document.createElement("div");
+    //   container.style.position = "relative";
+    //   container.appendChild(htmlBox);
+    //   container.appendChild(textBox);
     
-      var editBtn = document.createElement("button");
-      editBtn.innerText = "Edit";
-      container.appendChild(editBtn);
+    //   var editBtn = document.createElement("button");
+    //   editBtn.innerText = "Edit";
+    //   container.appendChild(editBtn);
     
-      google.maps.event.addListener(marker, 'click', (function(marker, i) {
-        return function() {
-          infowindow.setContent(container);
-          infowindow.open(map, marker);
-        }
-      })(marker, i));
+    //   google.maps.event.addListener(marker, 'click', (function(marker, i) {
+    //     return function() {
+    //       infowindow.setContent(container);
+    //       infowindow.open(map, marker);
+    //     }
+    //   })(marker, i));
 
-      google.maps.event.addDomListener(editBtn, "click", function() {
-        marker.set("editing", !marker.editing);
-      });
+    //   google.maps.event.addDomListener(editBtn, "click", function() {
+    //     marker.set("editing", !marker.editing);
+    //   });
 
-      google.maps.event.addListener(marker, "editing_changed", function(){
-        textBox.style.display = this.editing ? "block" : "none";
-        htmlBox.style.display = this.editing ? "none" : "block";
-      });
+    //   google.maps.event.addListener(marker, "editing_changed", function(){
+    //     textBox.style.display = this.editing ? "block" : "none";
+    //     htmlBox.style.display = this.editing ? "none" : "block";
+    //   });
       
-      google.maps.event.addDomListener(textBox, "change", function(){
-        htmlBox.innerHTML = textBox.value;
-        marker.set("html", textBox.value);
-      });
-    }
+    //   google.maps.event.addDomListener(textBox, "change", function(){
+    //     htmlBox.innerHTML = textBox.value;
+    //     marker.set("html", textBox.value);
+    //   });
+    // }
 
     //This is the definition of the map overlay class
     function MapOverlay(bounds, image, map) {
