@@ -68,7 +68,7 @@ app.controller('mainCtrl', function($scope, factService) {
 		$jq('#summary-1920').css('display', 'none');
 		$jq('#summary-1960').css('display', 'none');
 		$jq('#summary-1890').css('display', 'none');
-		$jq('.year2015').css('background-color', '#d1d96a');
+		$jq('.year2015').css('background-color', '#93af68');
 		$jq('.year1960').css('background-color', '#fff');
 		$jq('.year1920').css('background-color', '#fff');
 		$jq('.year1890').css('background-color', '#fff');
