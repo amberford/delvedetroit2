@@ -16,7 +16,6 @@ html {
 body {
 	font-family: "Lato", "Helvetica", "Calibri", sans-serif;
 	overflow-x: hidden;
-	margin-top: 135px;
 }
 
 /* NAVIGATION
@@ -400,6 +399,9 @@ footer {
 ================================================*/
 
 @media screen and (min-width: 1920px) {
+	body {
+		margin-top: 150px;
+	}
 	nav li {
 		font-size: 1.2em;
 	}
@@ -445,6 +447,9 @@ footer {
 }
 
 @media screen and (max-width: 1919px) {
+	body {
+		margin-top: 120px;
+	}
 	nav li {
 		font-size: 1em;
 	}
