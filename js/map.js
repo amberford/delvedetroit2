@@ -66,6 +66,12 @@ app.controller('mapCtrl', function($scope) {
     overlay1960.hide();
   };
 
+  $scope.hideAllMaps = function() {
+    overlay1890.hide();
+    overlay1920.hide();
+    overlay1960.hide();
+  };
+
   var oldLocs = [
     ['The Detroit Dry Dock Company was here. The company employed 600 people and built more ships than any other company in America in the 1890s.', 42.333359, -83.027398, 17],
     ["Detroit Stove Works was here. It was a major stove maker that had 1300-1400 employees in the 1890s. They produced 80,000 stoves annually and had more than 700 designs.", 42.346924, -83.003869, 18],
