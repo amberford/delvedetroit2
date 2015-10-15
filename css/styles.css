@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Dosis:400,600);
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 *,
 *:after,
 *:before {
@@ -15,19 +16,40 @@ html {
 body {
 	font-family: "Lato", "Helvetica", "Calibri", sans-serif;
 	overflow-x: hidden;
-	margin-top: 140px;
 }
 
 /* NAVIGATION
 ================================================*/
 nav {
 	width: 100%;
+	height: 100px;
+	padding-top: 20px;
 	position: fixed;
 	top: 0;
-	z-index: 99999999999999;
-	background-color: white;
+	z-index: 9999;
+	background: #fff;
+	/*box-shadow: 10px 20px 10px #fff;*/
+	font-family: "Montserrat";
 }
-header {
+nav ul {
+	margin: 0 auto;
+	width: 100%;
+
+	display: block;
+	text-align: center;
+}
+nav li {
+	display: inline-block;
+	vertical-align: middle;
+	padding: 4px 20px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+nav a {
+	color: black;
+	text-decoration: none;
+}
+/*header {
 	margin-top: 40px;
 	margin-bottom: 10px;
 }
@@ -66,7 +88,7 @@ nav li:hover {
 }
 nav li:active {
 	background: #ccc;
-}
+	}*/
 
 /* MAIN
 ================================================*/
@@ -85,30 +107,27 @@ main {
 /* TIMELINE
 ================================================*/
 #timeline {
-	margin: 10px 0 50px 0;
+	margin: 20px 0 50px 0;
 	margin-left: auto;
 	margin-right: auto;
 	height: 4px;
 	width: 45%;
 	font-weight: 700;
-	font-size: 0.8em;
 	line-height: 5em;
 	background-color: #ccc;
 	text-align: center;
 	position: relative;
 }
 #timeline a {
-	color: #000;
+	font-family: "Montserrat";
+	color: #666;
 }
 .date {
-	width: 25px;
-	height: 25px;
 	border-radius: 50%;
 	background-color: #fff;
 	text-align: center;
 	display: inline-block;
 	position: absolute;
-	top: -10px;
 }
 .year1890 {
 	border: 4px solid #f28d3f;
@@ -139,19 +158,15 @@ main {
 .year2015:hover {
 	background-color: #d1d96a !important;
 }
+button {
+	border: none;
+	font-family: "Montserrat";
+	padding: 7px 15px;
+}
 
 /* TIMELINE CONTENT
 ================================================*/
-#summary-2015 {
-
-}
-#summary-1960 {
-	display: none;
-}
-#summary-1920 {
-	display: none;
-}
-#summary-1890 {
+#summary-1960, #summary-1920, #summary-1890 {
 	display: none;
 }
 .timeline-data {
@@ -162,10 +177,11 @@ main {
 }
 .timeline-data h1 {
 	font-family: "Dosis", sans-serif;
-	font-size: 2em;
 	text-transform: uppercase;
+	font-size: 1.8em;
 }
 .timeline-data h4 {
+	font-family: "Montserrat";
 	text-transform: uppercase;
 	letter-spacing: 1px;
 }
@@ -174,8 +190,7 @@ main {
 	color: #666;
 }
 .timeline-data ul {
-	margin-bottom: 20px;
-	font-weight: 
+	margin-bottom: 20px;s
 }
 .overview li {
 	list-style: none;
@@ -194,7 +209,7 @@ main {
 	vertical-align: top;
 }
 .right {
-	width: 86%;
+	width: 84%;
 	margin-left: 3%;
 	display: inline-block;
 	vertical-align: top;
@@ -228,14 +243,16 @@ article h3, .title {
 	text-transform: uppercase;
 	margin-bottom: 7px;
 }
-aside {
+.column-sm {
+	width: 33%;
 	padding-right: 2%;
 	margin-bottom: 15px;
-	width: 33%;
+	display: block;
 	float: left;
 }
-aside img {
+aside {
 	width: 100%;
+	position: relative;
 }
 #pingree img {
 	width: 20%;
@@ -247,7 +264,7 @@ aside img {
 	display: inline-block;
 	vertical-align: top;
 }
-aside h4 {
+aside h4, .column-sm h4 {
 	padding: 7px 15px;
 	margin-bottom: 10px;
 	color: white;
@@ -256,6 +273,82 @@ aside h4 {
 	text-transform: uppercase;
 	display: inline-block;
 }
+
+/* CAPTION HOVER STYLES
+================================================*/
+aside img {  
+	width: 100%;
+	-webkit-transition: all 300ms ease-out;  
+	-moz-transition: all 300ms ease-out;  
+	-o-transition: all 300ms ease-out;  
+	-ms-transition: all 300ms ease-out;  
+	transition: all 300ms ease-out;  
+}  
+.caption {
+	height: 99%;
+	width: 100%;
+	padding: 20px 10px;
+	background-color: rgba(0,0,0,0.8);  
+	position: absolute;
+	z-index: 999;
+	top: 0;
+	color: #fff;   
+	-webkit-transition: all 300ms ease-out;  
+	-moz-transition: all 300ms ease-out;  
+	-o-transition: all 300ms ease-out;  
+	-ms-transition: all 300ms ease-out;  
+	transition: all 300ms ease-out;   
+	opacity: 0;
+	overflow: none;
+}  
+aside:hover .fade-caption {  
+	opacity: 1;  
+}
+
+/* MUSEUM STYLES
+================================================*/
+#sub-wrapper {
+	width: 60%;
+	margin: 0 auto;
+	text-align: center;
+}
+#sub-wrapper p {
+	margin-top: 7px;
+}
+#sub-wrapper a {
+	text-decoration: none;
+	color: red;
+}
+#sub-wrapper div {
+	margin: 20px 0;
+	padding: 10px;
+	width: 33%;
+	float: left;
+	display: block;
+}
+#sub-wrapper div img {
+	width: 100%;
+}
+#sub-wrapper ul {
+	clear: both;
+}
+#delve-info {
+	width: 75%;
+	margin: 0 auto;
+}
+#info {
+	padding-top: 20px;
+}
+#members {
+	padding-top: 20px; 
+}
+#sub-wrapper li {
+	display: block;
+	margin-bottom: 7px;
+}
+
+/* ATTRIBUTES
+================================================*/
 .bold, #year {
 	font-weight: 700;
 }
@@ -270,9 +363,6 @@ aside h4 {
 }
 .chartreuse {
 	color: #d1d96a;
-}
-.deeppink{
-	color: #EE1289;
 }
 .bg-orange {
 	background-color: #f28d3f;
@@ -309,6 +399,20 @@ footer {
 ================================================*/
 
 @media screen and (min-width: 1920px) {
+	body {
+		margin-top: 150px;
+	}
+	nav li {
+		font-size: 1.2em;
+	}
+	#timeline {
+		font-size: 1em;
+	}
+	.date {
+		width: 30px;
+		height: 30px;
+		top: -15px;
+	}
 	#map {
 		height: 450px;
 	}
@@ -335,11 +439,28 @@ footer {
 		font-size: 1.2em;
 	}
 	article h3, .title {
-	font-size: 1.8em;
+		font-size: 1.8em;
+	}
+	.caption {
+		font-size: 1em;
 	}
 }
 
 @media screen and (max-width: 1919px) {
+	body {
+		margin-top: 120px;
+	}
+	nav li {
+		font-size: 1em;
+	}
+	#timeline {
+		font-size: 0.8em;
+	}
+	.date {
+		width: 25px;
+		height: 25px;
+		top: -10px;
+	}
 	#map {
 		height: 325px;
 	}
@@ -366,47 +487,9 @@ footer {
 		font-size: 1em;
 	}
 	article h3, .title {
-	font-size: 1.5em;
+		font-size: 1.5em;
 	}
-}
-
-/*Museum-view*/
-
-a {
-	color: #EE1289;
-}
-
-.museum{
-  margin-top: 15px;
-  text-align: center;
-  text-shadow: 2px 2px white;
-  padding: 10px;
-  position: relative;
-}
-
-#link a {
-text-align: center;
-padding: 5px;
-padding-top: 15px;
-display: block;
-clear: both;
-}
-.bborder{
-padding:2px;
-border: solid black;
-margin: 10px;
-}
-
-/*about-view*/
-
-.about{
-	text-align: center;
-	font-size: 1.2em;
-	margin-left: 20%;
-	margin-right: 20%;
-
-}
-
-.about p{
-	padding-top: 10px;
+	.caption {
+		font-size: 0.8em;
+	}
 }
