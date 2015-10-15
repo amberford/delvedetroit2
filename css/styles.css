@@ -291,7 +291,6 @@ aside img {
 	transition: all 300ms ease-out;  
 }  
 .caption {
-	font-size: 0.8em;
 	height: 99%;
 	width: 100%;
 	padding: 20px 10px;
@@ -434,6 +433,9 @@ footer {
 	article h3, .title {
 		font-size: 1.8em;
 	}
+	.caption {
+		font-size: 1em;
+	}
 }
 
 @media screen and (max-width: 1919px) {
@@ -464,5 +466,8 @@ footer {
 	}
 	article h3, .title {
 		font-size: 1.5em;
+	}
+	.caption {
+		font-size: 0.8em;
 	}
 }
