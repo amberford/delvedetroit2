@@ -401,7 +401,7 @@ footer {
 	height: 100px;
 	line-height: 100px;
 	text-align: center;
-	margin-top: 80px;
+	margin-top: 150px;
 	background-color: #eee;
 	clear: both;
 }
@@ -458,6 +458,53 @@ footer {
 }
 
 @media screen and (max-width: 1919px) {
+	body {
+		margin-top: 140px;
+	}
+	nav li {
+		font-size: 1em;
+	}
+	#timeline {
+		font-size: 0.8em;
+	}
+	.date {
+		width: 25px;
+		height: 25px;
+		top: -10px;
+	}
+	#map {
+		height: 325px;
+	}
+	.timeline-data p {
+		font-size: 0.9em;
+	}
+	.timeline-data ul {
+		font-size: 0.9em;
+	}
+	.timeline-data li {
+		margin-bottom: 7px;
+	}
+	article p {
+		margin-bottom: 7px;
+		font-size: 1em;
+	}
+	aside figcaption {
+		margin-top: 5px;
+		margin-bottom: 7px;
+		font-size: 0.85em;
+		font-weight: 700;
+	}
+	.timeline-data h4 {
+		font-size: 1em;
+	}
+	article h3, .title {
+		font-size: 1.5em;
+	}
+	.caption {
+		font-size: 0.8em;
+	}
+}
+@media screen and (max-width: 1199px) {
 	body {
 		margin-top: 140px;
 	}
