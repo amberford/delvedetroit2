@@ -289,6 +289,7 @@ aside:hover .fade-caption {
 ================================================*/
 #sub-wrapper {
 	margin: 0 auto;
+	padding-top: 20px;
 	text-align: center;
 }
 #sub-wrapper p {
@@ -399,6 +400,9 @@ footer {
 	border: none;
 }
 
+#gallery h2 {
+	padding-top: 15px;
+}
 
 
 
