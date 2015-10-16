@@ -41,12 +41,7 @@ section {
   height: 100%;
   margin:0 auto;
 }
-#cf2 {
-  position:relative;
-  height:600px;
-  width:450px;
-  margin:0 auto;
-}
+
 #cf img {
   position:absolute;
   center:0;
@@ -56,24 +51,10 @@ section {
   transition: opacity 1s ease-in-out;
 }
 
-#cf2 img {
-  padding-top: 10px;
-  position:absolute;
-  center:0;
-  -webkit-transition: opacity 1s ease-in-out;
-  -moz-transition: opacity 1s ease-in-out;
-  -o-transition: opacity 1s ease-in-out;
-  transition: opacity 1s ease-in-out;
-}
 
 #cf img.top:hover {
   opacity:0;
 }
-
-#cf2 img.top:hover {
-  opacity:0;
-}
-
 
 #gallery h2 {
   text-align: center;
