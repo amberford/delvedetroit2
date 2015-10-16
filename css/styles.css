@@ -22,8 +22,6 @@ body {
 ================================================*/
 nav {
 	width: 100%;
-	height: 100px;
-	padding-top: 40px;
 	position: fixed;
 	top: 0;
 	z-index: 9999;
@@ -34,14 +32,12 @@ nav {
 nav ul {
 	margin: 0 auto;
 	width: 100%;
-
 	display: block;
 	text-align: center;
 }
 nav li {
 	display: inline-block;
 	vertical-align: middle;
-	padding: 4px 20px;
 	font-weight: 700;
 	text-transform: uppercase;
 }
@@ -49,51 +45,13 @@ nav a {
 	color: black;
 	text-decoration: none;
 }
-/*header {
-	margin-top: 40px;
-	margin-bottom: 10px;
+nav a:hover {
+	color: #961a1e;
 }
-header h1 a {
-	margin: 0 auto;
-	width: 250px;
-	height: 40px;
-	background: url('/img/logo.png') no-repeat;
-	display: block;
-	text-indent: -9999px;
-}
-nav h1 {
-	font-family: "Dosis", sans-serif;
-	font-size: 2em;
-	text-align: center;
-}
-nav ul {
-	margin: 0 auto;
-	margin-bottom: 20px;
-	text-align: center;
-}
-nav li {
-	display: inline-block;
-	background: #eee;
-	color: black;
-	padding: 4px 40px;
-	font-weight: 700;
-	font-size: 0.8em;
-	text-transform: uppercase;
-}
-nav li a {
-	text-decoration: none;
-}
-nav li:hover {
-	background: #ddd;
-}
-nav li:active {
-	background: #ccc;
-	}*/
 
 /* MAIN
 ================================================*/
 main {
-	width: 77%;
 	margin: 0 auto;
 	padding-bottom: 20px;
 	border-bottom: 2px solid #ccc;
@@ -101,7 +59,6 @@ main {
 }
 .wrapper {
 	margin: auto;
-	width: 77%;
 }
 
 /* TIMELINE
@@ -170,15 +127,12 @@ button {
 	display: none;
 }
 .timeline-data {
-	width: 30%;
-	padding-right: 3%;
 	display: inline-block;
 	vertical-align: top;
 }
 .timeline-data h1, .heading {
 	font-family: "Dosis", sans-serif;
 	text-transform: uppercase;
-	font-size: 1.8em;
 }
 .timeline-data h4 {
 	font-family: "Montserrat";
@@ -187,6 +141,7 @@ button {
 }
 .timeline-data p {
 	margin: 15px 0;
+	margin: auto;
 	color: #666;
 }
 .timeline-data ul {
@@ -198,26 +153,25 @@ button {
 	clear: both;
 	padding: 7px 3px;
 	margin-bottom: 10px;
+	margin: auto;
 }
 .overview li:nth-child(odd) {
 	background: #f5f5f5;
 }
 .bold-year {
-	width: 10%;
 	font-weight: 700;
 	display: inline-block;
 	vertical-align: top;
 }
 .right {
-	width: 84%;
 	margin-left: 3%;
 	display: inline-block;
 	vertical-align: top;
 }
+
 /* MAP
 ================================================*/
 #map {
-	width: 69.5%;
 	background-color: #4b8a79;
 	text-align: center;
 	font-family: "Dosis";
@@ -229,7 +183,6 @@ button {
 /* CONTENT STYLES
 ================================================*/
 #article-wrapper {
-	width: 69.5%;
 	display: inline-block;
 	vertical-align: top;
 }
@@ -244,7 +197,6 @@ article h3, .title {
 	margin-bottom: 7px;
 }
 .column-sm {
-	width: 33%;
 	padding-right: 2%;
 	margin-bottom: 15px;
 	display: block;
@@ -269,7 +221,6 @@ aside h4, .column-sm h4 {
 	margin-bottom: 10px;
 	color: white;
 	font-family: "Dosis", sans-serif;
-	letter-spacing: 1px;
 	text-transform: uppercase;
 	display: inline-block;
 }
@@ -313,7 +264,6 @@ aside:hover .fade-caption {
 /* MUSEUM STYLES
 ================================================*/
 #sub-wrapper {
-	width: 60%;
 	margin: 0 auto;
 	text-align: center;
 }
@@ -401,10 +351,17 @@ footer {
 	height: 100px;
 	line-height: 100px;
 	text-align: center;
-	margin-top: 150px;
+	margin-top: 120px;
 	background-color: #eee;
 	clear: both;
 }
+
+
+
+
+
+
+
 
 /* MEDIA QUERIES
 ================================================*/
@@ -413,8 +370,19 @@ footer {
 	body {
 		margin-top: 150px;
 	}
+	nav {
+		padding-top: 40px;
+		height: 100px;
+	}
 	nav li {
 		font-size: 1.2em;
+		padding: 4px 20px;
+	}
+	#article-wrapper {
+		width: 69.5%;
+	}
+	.timeline-data h1, .heading {
+		font-size: 1.8em;
 	}
 	#timeline {
 		font-size: 1em;
@@ -426,15 +394,31 @@ footer {
 	}
 	#map {
 		height: 450px;
+		width: 69.5%;
+	}
+	.timeline-data h1, .timeline-data h4 {
+		text-align: left;
+	}
+	.timeline-data {
+		width: 30%;
+		padding-right: 3%;
 	}
 	.timeline-data p {
 		font-size: 1.2em;
+		width: 100%;
+		padding: 10px 0 15px 0;
 	}
 	.timeline-data ul {
 		font-size: 1.2em;
 	}
 	.timeline-data li {
 		margin-bottom: 10px;
+	}
+	.facts {
+		display: block;
+	}
+	#random-fact {
+		display: block;
 	}
 	article p {
 		margin-bottom: 7px;
@@ -455,14 +439,54 @@ footer {
 	.caption {
 		font-size: 1em;
 	}
+	.column-sm h4 {
+		font-size: 1.2em;
+		letter-spacing: 1px;
+	}
+	main, .wrapper {
+		width: 77%;
+	}
+	.bold-year {
+		width: 10%;
+	}
+	.right {
+		width: 84%;
+		margin-left: 3%;
+	}
+	.column-sm {
+		width: 33%;
+	}
+	#pingree img {
+		display: inline-block;
+	}
+	.overview li {
+		width: 100%;
+	}
+	.title {
+		text-align: left;
+	}
+	#sub-wrapper {
+		width: 60%;
+	}
 }
 
-@media screen and (max-width: 1919px) {
+@media screen and (max-width: 1919px) and (min-width: 1286px) {
 	body {
 		margin-top: 140px;
 	}
+	nav {
+		padding-top: 40px;
+		height: 100px;
+	}
 	nav li {
 		font-size: 1em;
+		padding: 4px 20px;
+	}
+	#article-wrapper {
+		width: 69.5%;
+	}
+	.timeline-data h1, .heading {
+		font-size: 1.8em;
 	}
 	#timeline {
 		font-size: 0.8em;
@@ -474,15 +498,31 @@ footer {
 	}
 	#map {
 		height: 325px;
+		width: 69.5%;
+	}
+	.timeline-data h1, .timeline-data h4 {
+		text-align: left;
+	}
+	.timeline-data {
+		width: 30%;
+		padding-right: 3%;
 	}
 	.timeline-data p {
 		font-size: 0.9em;
+		width: 100%;
+		padding: 10px 0 15px 0;
 	}
 	.timeline-data ul {
 		font-size: 0.9em;
 	}
 	.timeline-data li {
 		margin-bottom: 7px;
+	}
+	.facts {
+		display: block;
+	}
+	#random-fact {
+		display: block;
 	}
 	article p {
 		margin-bottom: 7px;
@@ -502,14 +542,54 @@ footer {
 	}
 	.caption {
 		font-size: 0.8em;
+	}
+	.column-sm h4 {
+		font-size: 1em;
+		letter-spacing: 0.5px;
+	}
+	main, .wrapper {
+		width: 77%;
+	}
+	.bold-year {
+		width: 10%;
+	}
+	.right {
+		width: 84%;
+		margin-left: 3%;
+	}
+	.column-sm {
+		width: 33%;
+	}
+	#pingree img {
+		display: inline-block;
+	}
+	.overview li {
+		width: 100%;
+	}
+	.title {
+		text-align: left;
+	}
+	#sub-wrapper {
+		width: 60%;
 	}
 }
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1285px) and (min-width: 1045px) {
 	body {
 		margin-top: 140px;
 	}
+	nav {
+		padding-top: 40px;
+		height: 100px;
+	}
 	nav li {
 		font-size: 1em;
+		padding: 4px 20px;
+	}
+	#article-wrapper {
+		width: 69.5%;
+	}
+	.timeline-data h1, .heading {
+		font-size: 1.8em;
 	}
 	#timeline {
 		font-size: 0.8em;
@@ -521,15 +601,31 @@ footer {
 	}
 	#map {
 		height: 325px;
+		width: 69.5%;
+	}
+	.timeline-data h1, .timeline-data h4 {
+		text-align: left;
+	}
+	.timeline-data {
+		width: 30%;
+		padding-right: 3%;
 	}
 	.timeline-data p {
 		font-size: 0.9em;
+		width: 100%;
+		padding: 10px 0 15px 0;
 	}
 	.timeline-data ul {
 		font-size: 0.9em;
 	}
 	.timeline-data li {
 		margin-bottom: 7px;
+	}
+	.facts {
+		display: block;
+	}
+	#random-fact {
+		display: block;
 	}
 	article p {
 		margin-bottom: 7px;
@@ -549,5 +645,339 @@ footer {
 	}
 	.caption {
 		font-size: 0.8em;
+	}
+	.column-sm h4 {
+		font-size: 1em;
+	}
+	main, .wrapper {
+		width: 90%;
+	}
+	.bold-year {
+		width: 10%;
+	}
+	.right {
+		width: 80%;
+		margin-left: 5%;
+	}
+	.column-sm {
+		width: 33%;
+	}
+	#pingree img {
+		display: inline-block;
+	}
+	.overview li {
+		width: 100%;
+	}
+	.title {
+		text-align: left;
+	}
+	#sub-wrapper {
+		width: 60%;
+	}
+}
+@media screen and (max-width: 1046px) and (min-width: 890px) {
+	body {
+		margin-top: 110px;
+	}
+	nav {
+		padding-top: 20px;
+		height: 90px;
+	}
+	nav li {
+		font-size: 1em;
+		padding: 4px 15px;
+	}
+	#article-wrapper {
+		width: 69.5%;
+	}
+	.timeline-data h1, .heading {
+		font-size: 1.6em;
+	}
+	#timeline {
+		font-size: 0.75em;
+	}
+	.date {
+		width: 22px;
+		height: 22px;
+		top: -10px;
+	}
+	#map {
+		height: 300px;
+		width: 69.5%;
+	}
+	.timeline-data h1, .timeline-data h4 {
+		text-align: left;
+	}
+	.timeline-data {
+		width: 30%;
+		padding-right: 3%;
+	}
+	.timeline-data p {
+		font-size: 0.9em;
+		width: 100%;
+		padding: 10px 0 15px 0;
+	}
+	.timeline-data ul {
+		font-size: 0.9em;
+	}
+	.timeline-data li {
+		margin-bottom: 7px;
+	}
+	.facts {
+		display: block;
+	}
+	#random-fact {
+		display: block;
+	}
+	article p {
+		margin-bottom: 7px;
+		font-size: 1em;
+	}
+	aside figcaption {
+		margin-top: 5px;
+		margin-bottom: 7px;
+		font-size: 0.85em;
+		font-weight: 700;
+	}
+	.timeline-data h4 {
+		font-size: 0.85em;
+	}
+	article h3, .title {
+		font-size: 1.3em;
+	}
+	.caption {
+		font-size: 0.8em;
+	}
+	.column-sm h4 {
+		font-size: 1em;
+	}
+	main, .wrapper {
+		width: 92%;
+	}
+	.bold-year {
+		width: 10%;
+	}
+	.right {
+		width: 80%;
+		margin-left: 8%;
+	}
+	.column-sm {
+		width: 48%;
+	}
+	#pingree img {
+		display: inline-block;
+	}
+	.overview li {
+		width: 100%;
+	}
+	.title {
+		text-align: left;
+	}
+	#sub-wrapper {
+		width: 80%;
+	}
+}
+
+@media screen and (max-width: 889px) and (min-width: 671px) {
+	body {
+		margin-top: 110px;
+	}
+	nav {
+		padding-top: 20px;
+		height: 90px;
+	}
+	nav li {
+		font-size: 0.9em;
+		padding: 0px 7px;
+	}
+	#article-wrapper {
+		width: 100%;
+	}
+	.timeline-data {
+		width: 100%;
+	}
+	.timeline-data h1, .heading {
+		font-size: 1.6em;
+	}
+	#timeline {
+		font-size: 0.75em;
+	}
+	.date {
+		width: 22px;
+		height: 22px;
+		top: -10px;
+	}
+	#map {
+		height: 300px;
+		width: 100%;
+	}
+	.timeline-data h1, .timeline-data h4 {
+		text-align: center;
+	}
+	.timeline-data p {
+		font-size: 0.9em;
+		width: 90%;
+		padding: 10px 0 20px 0;
+	}
+	.timeline-data ul {
+		font-size: 0.9em;
+	}
+	.facts {
+		display: none;
+	}
+	.timeline-data li {
+		margin-bottom: 7px;
+	}
+	#random-fact {
+		display: none;
+	}
+	article p {
+		margin-bottom: 7px;
+		font-size: 1em;
+	}
+	aside figcaption {
+		margin-top: 5px;
+		margin-bottom: 7px;
+		font-size: 0.85em;
+		font-weight: 700;
+	}
+	.timeline-data h4 {
+		font-size: 0.9em;
+	}
+	article h3, .title {
+		font-size: 1.3em;
+	}
+	.caption {
+		font-size: 0.8em;
+	}
+	.column-sm h4 {
+		font-size: 1em;
+	}
+	main, .wrapper {
+		width: 90%;
+	}
+	.bold-year {
+		width: 10%;
+	}
+	.right {
+		width: 80%;
+		margin-left: 8%;
+	}
+	.column-sm {
+		width: 50%;
+	}
+	#pingree img {
+		display: none;
+	}
+	.overview li {
+		width: 75%;
+	}
+	.title {
+		text-align: center;
+	}
+	#sub-wrapper {
+		width: 90%;
+	}
+}
+
+@media screen and (max-width: 670px) {
+	body {
+		margin-top: 110px;
+	}
+	nav {
+		padding-top: 20px;
+		height: 90px;
+	}
+	nav li {
+		font-size: 0.9em;
+		padding: 0px 7px;
+	}
+	#article-wrapper {
+		width: 100%;
+	}
+	.timeline-data {
+		width: 100%;
+	}
+	.timeline-data h1, .heading {
+		font-size: 1.6em;
+	}
+	#timeline {
+		font-size: 0.75em;
+	}
+	.date {
+		width: 22px;
+		height: 22px;
+		top: -10px;
+	}
+	#map {
+		height: 300px;
+		width: 100%;
+	}
+	.timeline-data h1, .timeline-data h4 {
+		text-align: center;
+	}
+	.timeline-data p {
+		font-size: 0.9em;
+		width: 90%;
+		padding: 10px 0 20px 0;
+	}
+	.timeline-data ul {
+		font-size: 0.9em;
+	}
+	.facts {
+		display: none;
+	}
+	.timeline-data li {
+		margin-bottom: 7px;
+	}
+	#random-fact {
+		display: none;
+	}
+	article p {
+		margin-bottom: 7px;
+		font-size: 1em;
+	}
+	aside figcaption {
+		margin-top: 5px;
+		margin-bottom: 7px;
+		font-size: 0.85em;
+		font-weight: 700;
+	}
+	.timeline-data h4 {
+		font-size: 0.9em;
+	}
+	article h3, .title {
+		font-size: 1.3em;
+	}
+	.caption {
+		font-size: 0.8em;
+	}
+	.column-sm h4 {
+		font-size: 1em;
+	}
+	main, .wrapper {
+		width: 90%;
+	}
+	.bold-year {
+		width: 10%;
+	}
+	.right {
+		width: 80%;
+		margin-left: 8%;
+	}
+	.column-sm {
+		width: 50%;
+	}
+	#pingree img {
+		display: none;
+	}
+	.overview li {
+		width: 75%;
+	}
+	.title {
+		text-align: center;
+	}
+	#sub-wrapper {
+		width: 90%;
 	}
 }

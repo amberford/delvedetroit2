@@ -26,18 +26,19 @@
   transform-style: preserve-3d;
 }
 
-
 .tps-wrapper {
   float: left;
   width: 100%;
   height: 100%;
-
 }
 
+section {
+  width: 50%;
+}
 #cf {
   position:relative;
-  height:500px;
-  width:800px;
+  width: 100%;
+  height: 100%;
   margin:0 auto;
 }
 #cf2 {
@@ -46,7 +47,6 @@
   width:450px;
   margin:0 auto;
 }
-
 #cf img {
   position:absolute;
   center:0;
@@ -75,11 +75,10 @@
 }
 
 
-#gallery h1 {
+#gallery h2 {
   text-align: center;
-  font-family: "Montserrat";
-
-
+  font-family: "Dosis";
+  text-transform: uppercase;
 }
 
 #gallery h3{
