@@ -2,8 +2,9 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
 .tps-section {
-  width: 100%;
+  width: 80%;
   height: 500px;
+  margin: 0 auto;
   -webkit-perspective: 10em;
   -moz-perspective: 10em;
   -ms-perspective: 10em;
