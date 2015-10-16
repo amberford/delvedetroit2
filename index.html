@@ -23,6 +23,7 @@
 	<script src="js/1960Ctrl.js"></script>
 	<script src="js/factService.js"></script>
 	<script src="js/js.cookie.js"></script>
+	<script src="js/menu.js"></script>
 </head>
 <body ng-controller="mapCtrl">
 	<nav>
@@ -35,12 +36,24 @@
 				<li id="about"><a href="#/about">About</a></li>
 			</ul>
 		</div>
-		<div class="wrapper mobile-menu">
+		<div class="wrapper mobile-header">
+			<div id="hamburger">
+					<div></div>
+					<div></div>
+					<div></div>
+			</div>
 			<ul>
 				<li id="logo"><a href="#/" ng-click="get2015Map()"><img src="/img/logo.png"></a></li>
 			</ul>
 		</div>
 	</nav>
+	<div class="mobile-menu">
+			<ul>
+				<li id="about"><a href="#/gallery">Then vs. Now</a></li>
+				<li id="deeper"><a href="#/museum">Delve Deeper</a></li>
+				<li id="about"><a href="#/about">About</a></li>
+			</ul>
+		</div>
 	<div id="hide-all">
 		<div id="timeline">
 			<a href="#/1890" ng-click="get1890Map()"><div class="date year1890">1890</div></a>
